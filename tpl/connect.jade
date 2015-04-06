@@ -1,0 +1,106 @@
+
+extends layout
+
+block variables
+  - var section = 'connect'
+  - var rootdir = '../'
+
+block content
+
+  .container
+
+    include header
+
+    .connect
+
+      .copyblock
+        .copy.copybold LET'S CONNECT
+
+      .address
+        .inner
+          .title Premise
+          .copy 645 7th Street
+          .copy San Francisco, CA 94103
+          .copy.email info@premise.com
+
+      form.form
+        .inner
+          .subtitle We'd love to hear from you, send us a note.
+          .inputs
+            .input.short
+              .inner 
+                input(type='text',name='firstname',placeholder='First Name *')
+            .input.short
+              .inner
+                input(type='text',name='lastname',placeholder='Last Name *')
+            .clear
+            .input.long
+              .inner 
+                input(type='email',name='email',placeholder='Email *')
+            .clear
+            .input.short
+              .inner
+                input(type='text',name='role',placeholder='Role *')
+            .input.short
+              .inner
+                input(type='text',name='organization',placeholder='Organization *')
+            .clear
+            .input.long
+              .inner
+                textarea(name='message',placeholder='Message')
+          .clear
+          .radio
+            .title What would you like to chat about?
+            .option
+              .value
+                input(type='radio',name='subject',value='sales',id='radio_sales')
+              label.name(for='radio_sales') Sales
+              .clear
+            .option
+              .value
+                input(type='radio',name='subject',value='partnerships',id='radio_partnerships')
+              label.name(for='radio_partnerships') Partnerships
+              .clear
+            .option
+              .value
+                input(type='radio',name='subject',value='press',id='radio_press')
+              label.name(for='radio_press') Press
+              .clear
+            .option
+              .value
+                input(type='radio',name='subject',value='contributing',id='radio_data')
+              label.name(for='radio_data') Contributing data
+              .clear
+            .option
+              .value
+                input(type='radio',name='subject',value='careers',id='radio_careers')
+              label.name(for='radio_careers') Careers at Premise
+              .clear
+          .radio.sub
+            .title Subscribe to our newsletter:
+            .option
+              .value
+                input(type='radio',name='subscribe',value='yes',id='radio_sub_yes',checked)
+              label.name(for='radio_sub_yes') Yes, sign me up!
+              .clear
+            .option
+              .value
+                input(type='radio',name='subscribe',value='no',id='radio_sub_no')
+              label.name(for='radio_sub_no') No thanks.
+              .clear
+          .fine We send our newsletter about once a month, we promise not to spam you
+
+          .cta
+            .copy SUBMIT
+ 
+    .clear
+
+    include footer
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Loader.load('#{rootdir}jst/connect.js', 'Connect');
+      Global.i()
+    }
+
+    

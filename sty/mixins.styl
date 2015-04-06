@@ -1,0 +1,47 @@
+
+clearfix()
+  &:before
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+  zoom: 1 if support-for-ie
+
+.clear
+  clearfix()
+
+filterblur(size)
+  -webkit-filter blur(size)
+  -moz-filter blur(size)
+  -o-filter blur(size)
+  -ms-filter blur(size)
+  filter blur(size)
+
+f-prox-light()
+  font-family 'proxima-nova'
+  font-weight 100
+  font-style normal
+
+f-prox-lightb()
+  font-family 'proxima-nova'
+  font-weight 300
+  font-style normal
+
+f-prox-regular()
+  font-family 'proxima-nova'
+  font-weight 400
+  font-style normal
+
+f-prox-semi()
+  font-family 'proxima-nova'
+  font-weight 600
+  font-style normal
+
+f-proxc-bold()
+  font-family 'proxima-nova-condensed'
+  font-weight 600
+  font-style normal
+
+aitw(pt)
+  unit(pt*40/50, 'pt')

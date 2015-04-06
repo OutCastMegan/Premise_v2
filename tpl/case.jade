@@ -1,0 +1,94 @@
+
+extends layout
+
+block variables
+  - var section = 'case'
+  - var rootdir = '../'
+
+block content
+
+  .container
+
+    include header
+
+    .cases
+      .loading.on
+        .clear
+        .bar
+      each study, index in cases
+        .case(class='case_' + study.name).off
+          .clear
+          .top
+          .nav
+            .inner
+              .arrow.left
+                .box
+              .arrow.right
+                .box
+              .middle
+                .label(class='label_' + index) CASE STUDY
+                if study.titleb != ''
+                  .titleA #{study.titlea}
+                  .titleB #{study.titleb}
+                else
+                  .titleC #{study.titlea}
+          .who
+            .type #{study.type}
+            .title WHO: #{study.who}
+            .clear
+
+          .problem
+            .label PROBLEM:
+            .copy !{study.problem}
+
+          .solution
+            .label SOLUTION:
+            .copy !{study.solution}
+
+          .observation
+            .title ON THE GROUND OBSERVATIONS
+            .image
+
+          .study
+            .inner
+              if study.study.description == ""
+                .title.centered #{study.study.title}
+              else
+                .title #{study.study.title}
+                .desc #{study.study.description}
+              .image
+
+          .nav.navbottom
+            .inner
+              .arrow.left
+                .box
+              .arrow.right
+                .box
+              .middle
+                if index == 4
+                  - var next = cases[0]
+                else
+                 - var next = cases[index+1]
+                .label(class='label_' + next) NEXT CASE STUDY
+
+                if study.titleb != ''
+                  .titleA #{study.titlea}
+                  .titleB #{study.titleb}
+                else
+                  .titleC #{study.titlea}
+ 
+      .bottomcontact
+        .copy Sales and partnership inquiries
+        a.cta.contact(href='#{rootdir}connect/' + (c.index ? 'index.html' : ''))
+          .copy CONTACT US
+
+
+    
+    include footer
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Loader.load('#{rootdir}jst/case.js', 'Case');
+      Global.i()
+    }
+ 

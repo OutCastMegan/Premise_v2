@@ -1,0 +1,82 @@
+
+.connect
+  padding 60px 120px
+  max-width 1440px
+  margin auto
+
+  > .form
+    float left
+    width 50%
+
+  > .address
+    float right
+    width 50%
+    > .inner
+      padding 0 0 0 60px
+      > .title
+        f-proxc-bold()
+        font-size aitw(30)
+      > .copy
+        font-size aitw(21)
+        &.email
+          padding 40px 0 0 0
+
+  > .form > .inner > .subtitle
+    font-size aitw(21)
+    padding 0 0 20px 0
+  > .form > .inner > .fine
+      font-size aitw(12)
+      padding 20px 0 0 0
+  > .form > .inner > .cta
+      float left
+      margin 40px 0 80px 0
+      width 50%
+      > .copy
+        text-align center
+  > .form > .inner > .inputs
+    > .input
+      float left
+      &.short
+        width 50%
+      &.long
+        width 100%
+      > .inner
+        margin 5px 10px 5px 0
+        > input, > textarea
+          box-sizing border-box
+          width 100%
+          display block
+          border none
+          padding 20px
+          font-size aitw(17)
+          background-color c_mono5
+          color c_mono2
+          f-prox-light()
+          placeholder(color c_mono2,)
+
+  > .form > .inner > .radio
+    width 60%
+    padding 30px 0 0 0
+    > .title
+      font-size aitw(17)
+      padding 0 0 10px 0
+    > .option
+      font-size aitw(17)
+      padding 5px
+      cursor pointer
+      &:hover
+        background-color c_mono5
+        > .label.name
+          color c_blue
+      > label.name
+        padding 5px 0
+        cursor pointer
+        margin 0 0 0 20px
+      > .value
+        float left
+  > .form > .inner > .radio.sub > .option
+    > label.name
+      margin 0 0 0 20px
+    > .value
+      float left
+

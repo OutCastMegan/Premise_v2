@@ -1,0 +1,38 @@
+
+extends layout
+
+block variables
+  - var section = 'press'
+  - var rootdir = '../'
+
+block content
+
+  .container
+
+    include header
+
+    .press
+      .inner
+        .title PRESS
+
+        .subtitle News
+        .articles
+          for article, index in c.press.article
+            a.article(href=article.link, target='_new', class=(index < 5 ? 'on' : 'off moreable'))
+              .date #{article.date}
+              .source #{article.source}: 
+              .title #{article.title}
+              .clear
+        .more + More
+
+      .inquiries
+        .copy For press inquiries, contact:
+        a.email(href='mailto:press@premise.com') press@premise.com
+
+    include footer
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Global.i()
+    }
+ 

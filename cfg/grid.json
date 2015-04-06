@@ -1,0 +1,92 @@
+{
+  "grid": [
+    {
+      "type": "blog",
+      "copy1": "Tracking the price divergence for meats and sweets in Kano and Lagos during Ramadan.",
+      "url": "http://blog.premise.com/data/science/2014/08/06/holiday-feasts-in-nigeria/"
+      
+    },
+    {
+      "type": "instagram",
+      "copy1": "Capturing the political sentiment across Ankara, Turkey during a geopolitically volatile time."
+    },
+    {
+      "type": "blog",
+      "copy1": "Discerning the economic effects of drought, new policies and poor cold storage infrastructure in India.",
+      "url": "http://blog.premise.com/data/science/2014/09/15/politics-storage-and-food-prices-in-india/"
+    },
+
+    {
+      "type": "instagram",
+      "copy1": "Determining gas and diesel price patterns across petrol stations in the Philippines."
+    },
+    {
+      "type": "blog",
+      "copy1": "FAO determines Premise's data in Brazil can predict food trends 25 days in advance.",
+      "url": "http://blog.premise.com/data/science/2014/12/22/UN-FAO/"
+    },
+    {
+      "type": "instagram",
+      "copy1": "Comparing the before and after effects of Typhoon Hagupit in the Philippines four days and two blocks apart"
+    },
+    {
+      "type": "casestudy",
+      "copy1": "Vulcan: Abating the spread of Ebola by tracking sanitary infrastructure across Monrovia.",
+      "url": "./case#5"
+    },
+    {
+      "type": "instagram",
+      "copy1": "\"We are imprisoned, abducted and killed. And still you want us to be silent?\" Capturing social sentiment in Mexico."
+      
+    },
+    {
+      "type": "blog",
+      "copy1": "Found on nearly every market shelf globally, Coca-Cola is a bellwether for a country's economic health.",
+      "url": "http://blog.premise.com/data/science/2014/09/26/introducing-premise-coca-cola-index/"
+    },
+    {
+      "type": "casestudy",
+      "copy1": "Helping investors bring electricity to the first mile in sub-Saharan Africa.",
+      "url": "./case#1"
+    },
+    {
+      "type": "blog",
+      "copy1": "Determining Ebola's impact on food prices in markets across Monrovia, Liberia.",
+      "url": "http://blog.premise.com/data/science/2014/11/10/liberia-update/"
+    },
+    {
+      "type": "blog",
+      "copy1": "Documenting the concentration of political posters in eight cities during the 2014 Brazilian elections.",
+      "url": "http://blog.premise.com/data/science/2014/10/02/posters/"
+    },
+    {
+      "type": "instagram",
+      "copy1": "Mapping barricade locations during the pro-democracy protests in Hong Kong, fall 2014."
+    },
+    {
+      "type": "instagram",
+      "copy1": "Deodorant, one of the hardest basic items for Venezuelans to find, gets stocked at a shop in Maracaibo."
+    },
+    {
+      "type": "casestudy",
+      "copy1": "Piercing the grey market veil to discern consumer product placement in Vietnam.",
+      "url": "./case#3"
+    },
+
+    {
+      "type": "casestudy",
+      "copy1": "Standard Chartered: Tracking the cost of feeding 200 million people in Nigeria and Ghana",
+      "url": "./case#4"
+    },
+
+    {
+      "type": "casestudy",
+      "copy1": "Bloomberg: Pioneering alternative economic indicators in key global markets",
+      "url": "./case#2"
+    },
+    {
+      "type": "instagram",
+      "copy1": "Falling oil prices have devastated access to basic goods and staples in Caracas, Venezuela"
+    }
+  ]
+}

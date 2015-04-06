@@ -1,0 +1,81 @@
+.footer
+  background-color c_mono1
+  padding 60px 0
+  color c_white
+  > .inner
+    padding 0 60px
+    max-width 1440px
+    margin auto
+    > .left
+      float left
+      > .sitemaps
+        > .sitemap
+          padding 0 15px 0 0
+          float left
+          > .title, > .item
+            padding 7px 15px 7px 15px
+            font-size aitw(15)
+            f-prox-light()
+          > .title
+            text-transform uppercase
+          > .item
+            display block
+            color c_white
+            text-decoration none
+            cursor pointer
+            transition background-color 0.1s linear
+            &:hover
+              background-color c_mono3
+
+    > .right
+      float right
+      > .icons
+        > .icon
+          float left
+          padding 5px 11px 0 0
+          cursor pointer
+          transition all 0.1s linear
+          &.last
+            padding 5px 0 0 0
+          &:hover > svg
+            > rect, > g > rect
+              stroke c_blue
+            > g > rect.rectfill
+              fill c_blue
+            > g > path, > g > circle
+              fill c_blue
+
+      > .signup
+        padding 20px 0 10px 0
+        > .title
+          font-size aitw(14)
+          padding 0 0 24px 0
+        > form.signupform
+
+          > input.email
+            float left
+            background-color c_monoI
+            color c_mono0
+            padding 11px 20px
+            border none
+            font-size aitw(15)
+            width 174px
+            placeholder(color c_mono1,padding 0 0 0 20px,)
+            color c_white
+            f-prox-light()
+
+          > input.submit
+            cursor pointer
+            float left
+            border none
+            font-size aitw(15)
+            background-color c_white
+            padding 11px
+            width 85px
+            f-prox-semi()
+
+      > .copyright
+        padding 15px 10px 0 0
+        font-size aitw(12)
+        f-prox-light()
+

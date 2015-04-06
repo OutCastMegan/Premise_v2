@@ -1,0 +1,48 @@
+.tech
+  padding 0 0 100px 0
+  display block
+  > .types
+    > .type
+      &.on
+        display block
+      &.off
+        display none
+      > .title
+        font-size aitw(29)
+        f-proxc-bold()
+        color c_red2
+        text-align center
+        margin 0 0 10px 0
+      > .desc
+        font-size aitw(18)
+        f-prox-light()
+        text-align center
+        color c_mono3
+        padding 0 60px
+        height 40px
+      > .icon
+        width 350px
+        height 350px
+        margin auto
+
+  > .typemenu
+    width 185px
+    margin 60px auto 0 auto
+    > .dot
+      width 15px
+      height 15px
+      border 3px solid c_mono1
+      border-radius 50%
+      float left
+      margin-right 20px
+      background-color c_white
+      transition background-color 0.1s linear
+      cursor pointer
+      &.last
+        margin-right 0px
+      &.filled
+        background-color c_red2
+    > .border
+      height 3px
+      background-color c_mono1
+      margin -11px 0 0 0

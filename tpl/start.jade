@@ -1,0 +1,72 @@
+
+extends layout
+
+block variables
+  - var section = 'start'
+  - var rootdir = '../'
+
+block content
+
+  .container
+
+    include header
+
+    .start
+
+      .copyblock
+        .copy.copybold GET STARTED
+        .copy.copylight Work for Premise when you want and as much as you want.
+
+      .features
+        .feature.right
+          .desc
+            .number 1
+            .line
+            .copy Download the app for free from the Google Play store. Log in and choose the city where you'll be contributing data.
+          .shot
+            .picture
+              img(src="#{rootdir}img/shots/getstarted.png")
+          .clear
+        .bottom
+
+        .feature.left
+          .desc
+            .number 2
+            .line
+            .copy Complete and submit tasks on your own time, earning points for each observation.
+          .shot
+            .picture
+              img(src="#{rootdir}img/shots/tasks.png")
+          .clear
+        .bottom
+
+        .feature.right
+          .desc
+            .number 3
+            .line
+            .copy Exchange your points for mobile cash.
+          .shot
+            .picture
+              img(src="#{rootdir}img/shots/rewards.png")
+          .clear
+        .bottom
+
+      .faq
+        .title CONTRIBUTOR FAQ
+
+        .questions
+          each q, index in contribfaq
+            .block(class=(index < 5 ? 'on' : 'off moreable'))
+              .question #{q.question}
+              .answer.off #{q.answer}
+          .more + More
+
+      include download
+
+    include footer
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Loader.load('#{rootdir}jst/start.js', 'Start');
+      Global.i()
+    }

@@ -1,0 +1,85 @@
+.home-hero-container
+  background: rgba(c_mono0, 0.8)
+.hero, .herob, .herowork, .herocareers
+  position relative
+  max-width 1440px
+  height 795px
+  margin auto
+  &.herob
+    background url('../img/hero_about.jpg')
+    max-width none
+
+  &.herocareers
+    margin-bottom 66px
+    height 714px
+
+  &.herofront
+    height auto
+    border 1px solid rgba(c_white, 0.4)
+    max-width 1126px
+    > .overlay
+      width 100%
+      // Maintain a 16:10 aspect ratio - the same as the videos, so the height of the hero is consistent.
+      padding-top 62.5% !important
+      height 0 !important
+      background url('../img/hero.jpg')
+      background-repeat no-repeat
+      background-size cover
+      background-position center
+      transition opacity 0.5s ease-in-out, opacity 0.35s linear
+      opacity 1
+      &.off
+        position absolute
+        top 0
+        left 0
+        opacity 0
+      > .inner
+        top 0
+        left 0
+        position absolute
+    > .video
+      background-color c_mono0
+      height auto
+      object-fit contain
+      width 100%
+      margin 0 auto
+      &.off
+        display none
+      &.on
+        display block
+  &.herowork
+    max-width none
+    background url('../img/hero_contributors.jpg')
+    background-position center
+    background-repeat repeat-x
+    height 713px
+    > .inner
+      background-color rgba(black, 0.44)
+    > .inner > .title > .bigger
+      font-size aitw(60)
+  &.herocareers
+    background url('../img/hero_careers.jpg')
+    background-position center
+    max-width none
+    background-size cover
+    > .inner
+      background-color rgba(black, 0.44)
+  .inner
+    background-color rgba(black 0.44)
+    position relative
+    width 100%
+    height 100%
+    > .title
+      position absolute
+      font-size aitw(50)
+      f-prox-regular()
+      color c_white
+      text-align center
+      height 80px
+      left 15px
+      right 15px
+      top 50%
+      margin-top -40px
+      letter-spacing 1pt
+      text-shadow 0 0 24px c_black, 2px 2px c_black
+

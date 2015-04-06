@@ -1,0 +1,33 @@
+.grid(name="grid").section.section_grid
+
+  .copyblock
+    .copy.copybold OUR STORIES
+    .copy.copylight.copysmaller Explore the grid below to learn more about what we do.
+
+  each g, i in grid
+    a.cell(class='cell' + (i+1),href=g.url,title=g.copy1)
+      .boxen
+        .box.box1
+          .inner
+        .box.box2
+          .inner
+        .box.box3
+          .inner
+        .box.box4
+          .inner
+        .cinner
+          .copy(title='',alt='') #{g.copy1}
+
+      if g.type == 'star'
+        .special.star
+          include ../svg/star.svg
+      //if g.type == 'instagram'
+        .special.instagram
+          include ../svg/instagram.svg
+      if g.type == 'blog'
+        .special.blog
+          include ../svg/blog.svg
+      if g.type == 'casestudy'
+        .special.casestudy CASE STUDY
+
+.clear

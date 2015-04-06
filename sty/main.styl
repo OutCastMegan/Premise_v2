@@ -1,0 +1,121 @@
+vendor-prefixes ?= webkit moz o ms official
+
+@import variables
+@import vendor
+@import mixins
+@import fonts
+
+@import status
+
+@import header
+
+@import hero
+@import tech
+@import cap
+@import grid
+@import why
+@import contact
+
+@import about
+@import work
+@import start
+@import careers
+@import press
+
+@import connect
+
+@import case
+
+@import footer
+
+body
+  margin 0
+  padding 0
+  font-size 12pt
+  f-prox-light()
+  letter-spacing 1px
+  background-color c_mono0
+  color c_mono2
+  placeholder(f-prox-light)
+  &.noscroll
+    overflow hidden
+
+input-placeholder
+  color c_mono2
+  f-prox-light()
+
+.container
+  margin auto
+  background-color c_white
+
+.errorpage
+  padding 210px 0 180px 0
+  > .cta
+    width 200px
+    margin auto
+    text-align center
+
+.copyblock
+  font-size aitw(30)
+  padding 60px 60px 20px 60px
+  text-align center
+  color c_mono2
+  &.closer
+    padding 60px 90px 20px 90px
+  &.lineheight
+    line-height aitw(40)
+  &.max
+    max-width 1440px
+    margin auto
+  &.copycareers
+    padding 60px 130px 6px 130px
+  &.contributors
+    padding 83px 120px 20px 120px
+  > .copy
+    padding 0 0 35px 0
+  &.block1
+    text-transform uppercase
+    background-color rgba(c_mono0, 0.8)
+    color white
+    margin 0 0 0 0
+    letter-spacing 1px
+    font-size aitw(27)
+    padding 50px 60px 10px 60px
+    > .copy
+      width 880px
+      margin auto
+  > .copybold
+    f-proxc-bold()
+    font-size aitw(28)
+  > .copylight
+    f-prox-light()
+  > .copysmaller
+    f-prox-light()
+    font-size aitw(24)
+
+.blue
+  color c_blue
+
+.cta
+  display block
+  border 3px solid c_blue
+  text-decoration none
+  transition background-color 0.1s linear
+  cursor pointer
+  > .copy
+    text-align center
+  &:hover
+    background-color c_blue
+    > .copy
+      color c_white
+
+  > .copy
+    letter-spacing 2px
+    padding 24px 40px
+    color c_blue
+    f-proxc-bold()
+    font-size aitw(17)
+    transition color 0.1s linear 0.1s
+
+@import iphone
+

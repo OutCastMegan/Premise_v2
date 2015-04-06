@@ -1,0 +1,69 @@
+.cap
+  display block
+  border-top 1px solid c_monob
+  border-bottom 1px solid c_monob
+  padding 30px 60px 90px 60px
+  max-width 1440px
+  margin auto
+  > .capmenu
+    width 473px
+    margin 0 auto 90px auto
+    > .item
+      float left
+      padding 0 20px
+      font-size aitw(18)
+      f-proxc-bold()
+      color c_mono2
+      cursor pointer
+      transition text-decoration 0.1s linear, color 0.2s linear
+      &.active
+        color c_blue
+      &:hover
+        text-decoration underline
+    > .line
+      float left
+      width 100px
+      height 1px
+      background-color c_mono2
+      margin 12px 0 0 0
+  > .caps
+    > .capitem
+      &.on
+        display block
+      &.off
+        display none
+      > .left
+        width 50%
+        float left
+        > .image
+          margin 0 30px 0 10px
+          > img
+            width 100%
+            border 1px solid c_mono2
+            padding 5px
+      > .right
+        float right
+        width 50%
+        > .title
+          f-proxc-bold()
+          font-size aitw(30) 
+          padding 20px 0 0 30px
+        > .desc
+          font-size aitw(17)
+          padding 20px 50px 20px 30px
+          color c_mono3
+        > .caplist
+          font-size aitw(16)
+          padding 0px 0 20px 27px
+          color c_mono3
+          > .item
+            margin-left 20px
+            padding 0 0 10px 0
+            &.last
+              color c_blue
+              text-decoration none
+
+        > .cta
+          float left
+          margin 20px 0 0 30px
+

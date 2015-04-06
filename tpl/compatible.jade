@@ -1,0 +1,46 @@
+doctype
+
+html(lang='en')
+  head
+    title #{c.meta.title}
+    meta(http-equiv="X-UA-Compatible",content="IE=Edge,chrome=1")
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height')
+
+    link(rel='stylesheet',href="../css/main.css",type='text/css',media='all')
+    link(rel='stylesheet',href="../css/fonts.css",type='text/css',media='all')
+
+    script(type='text/javascript').
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', '#{c.analytics}']);
+      _gaq.push(['_trackPageview']);
+
+
+    style(type="text/css").
+      .compatible {
+        padding: 120px 20px;
+        color: #FFF;
+        text-align: center;
+      }
+      .compatible .title {
+        font-size: 22pt;
+        padding: 0 0 40px 0;
+      }
+      .compatible .copy {
+        font-size: 20pt;
+      }
+      a {
+        color: #009bff;
+        text-decoration: none;
+      }
+
+  body
+
+    .compatible
+      .title Sorry! Your browser is not compatible
+      .copy To get the best possible experience using our site, we recommend using the latest version of <a href="http://windows.microsoft.com/en-us/internet-explorer/browser-ie">Internet Explorer</a>, <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>, or <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>
+
+
+

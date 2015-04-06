@@ -1,0 +1,94 @@
+
+
+if section == 'index'
+  .dots
+    .inner
+      a.dot.dot_home(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#home")
+        .inner
+          .label: .copy Home
+      a.dot.dot_tech(href="#{rootdir}" + (c.index ? 'index.html' : '')+ "#tech")
+        .inner
+          .label: .copy Our Technology
+      a.dot.dot_cap(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#cap")
+        .inner
+          .label: .copy Our Capabilities
+      a.dot.dot_grid(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#grid")
+        .inner
+          .label: .copy Our Stories
+      a.dot.dot_why(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#why")
+        .inner
+          .label: .copy Why Premise
+
+.header
+  .inner
+    .hfade.off
+    a.logo(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#home")
+      include ../svg/logo3.svg
+
+    .hamburger.off
+      .line.line1
+      .line.line2
+      .line.line3
+ 
+    .menu
+      a.item(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#tech")
+        .copy Our Technology
+      a.item(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#cap")
+        .copy Our Capabilities
+      a.item(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#grid")
+        .copy Our Stories
+      a.item(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#why")
+        .copy Why Premise
+      .item
+        .copy(href='#{rootdir}about/' + (c.index ? 'index.html' : '')) About
+        .carrot
+          include ../svg/carrot.svg
+        .submenu
+          a.item(href='#{rootdir}about/' + (c.index ? 'index.html' : '')) Leadership
+          a.item(href='#{rootdir}press/' + (c.index ? 'index.html' : '')) Press
+          a.item(href='https://medium.com/@premisedata',target="_blank") Blog
+          a.item(href='#{rootdir}careers/' + (c.index ? 'index.html' : '')) Careers
+          a.item(href='#{rootdir}connect/' + (c.index ? 'index.html' : '')) Contact
+      a.item(href='#{rootdir}work/' + (c.index ? 'index.html' : ''))
+        .copy Contributors
+    .clear
+
+
+    .mobilemenu.off
+      .inner
+        .page.page1.on
+          //a.item(href="#{rootdir}" + (c.index ? 'index.html': '') + "#tech")
+            .copy Our Technology
+          //a.item(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#cap")
+            .copy Our Capabilities
+          //a.item(href="#{rootdir}#grid")
+            .copy Our Stories
+          a.item(href='#{rootdir}connect/' + (c.index ? 'index.html' : ''))
+            .copy Contact
+          a.item(href='#{rootdir}case/' + (c.index ? 'index.html' : ''))
+            .copy Case Studies
+          //a.item(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#why")
+            .copy Why Premise
+          .item.aboutitem
+            .carrot
+              include ../svg/carrot.svg
+            .copy About
+          a.item(href='#{rootdir}work/' + (c.index ? 'index.html' : ''))
+            .copy Contributors
+
+        .page.page2.off
+          .aboutitem.item
+            .carrot.left
+              include ../svg/carrot.svg
+            .copy
+          a.item(href='#{rootdir}about/' + (c.index ? 'index.html' : ''))
+            .copy Leadership
+          a.item(href='#{rootdir}press/' + (c.index ? 'index.html' : ''))
+            .copy Press
+          a.item(href='https://medium.com/@premisedata',target="_blank")
+            .copy Blog
+          a.item(href='#{rootdir}careers/' + (c.index ? 'index.html' : ''))
+            .copy Careers
+        .clear
+.fade.off
+

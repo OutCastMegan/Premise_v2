@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Premise Data</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+    <meta name="description" content="Premise provides real-time data and on the ground intelligence powered by our global network of contributors.">
+    <meta name="theme-color" content="#FF0000">
+    <meta property="og:url" content="http://premise.oclabs.net/">
+    <meta property="og:title" content="Premise Data">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://premise.oclabs.net/img/share.png">
+    <meta property="og:description" content="Premise provides real-time data and on the ground intelligence powered by our global network of contributors.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Premise Data">
+    <meta name="twitter:description" content="Premise provides real-time data and on the ground intelligence powered by our global network of contributors.">
+    <meta name="twitter:image" content="http://premise.oclabs.net/img/share.png">
+    <!-- icons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="../ico/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../ico/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../ico/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../ico/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../ico/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="../ico/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="../ico/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="../ico/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../ico/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../ico/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../ico/mstile-144x144.png">
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="all">
+    <!--script(src="http://use.typekit.net/dul0svi.js")-->
+    <!--script.-->
+    <!--  try{Typekit.load();}catch(e){}-->
+    <link rel="stylesheet" href="../css/fonts.css" type="text/css" media="all">
+    <script type="text/javascript" src="../jst/loader.js"></script>
+    <!-- aws-->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.8.min.js"></script>
+    <script>
+      Loader.root = '../';
+      
+    </script>
+  </head>
+  <body id="whatwedo">
+    <div class="container">
+      <div class="header">
+        <div class="inner">
+          <div class="hfade off"></div><a href="../index.html#home" class="logo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="176.9px" height="36.4px" viewBox="11.5 81.9 176.9 36.4" enable-background="new 11.5 81.9 176.9 36.4"
+	 xml:space="preserve">
+<rect x="12.8" y="83.2" fill="#FC1D00" width="33.8" height="33.8"/>
+<rect class="logorect" x="12.8" y="100.1" fill="#FFFFFF" width="16.9" height="16.9"/>
+<g>
+	<g>
+		<path fill="#FFFFFF" d="M65,103v7.5h-4.1V89.9h8.2c2.4,0,4.2,0.6,5.6,1.8c1.4,1.2,2,2.8,2,4.8c0,2-0.7,3.5-2,4.7
+			c-1.4,1.2-3.2,1.8-5.6,1.8L65,103L65,103z M65,99.8h4.1c1.1,0,2-0.3,2.6-0.9c0.6-0.6,0.9-1.4,0.9-2.4c0-1-0.3-1.8-0.9-2.5
+			c-0.6-0.6-1.5-1-2.6-1H65V99.8z"/>
+		<path fill="#FFFFFF" d="M85,102.2v8.2h-4.1V89.9h7.7c2.3,0,4.2,0.5,5.5,1.6c1.3,1.1,2,2.5,2,4.5c0,1.1-0.3,2-0.8,2.7
+			c-0.6,0.8-1.4,1.4-2.4,1.8c1.2,0.4,2.1,0.9,2.6,1.8c0.5,0.8,0.8,1.9,0.8,3.1v1.5c0,0.6,0.1,1.2,0.2,1.8c0.1,0.6,0.4,1.1,0.8,1.4
+			v0.3H93c-0.4-0.3-0.6-0.8-0.7-1.5c-0.1-0.7-0.2-1.4-0.2-2v-1.5c0-1-0.3-1.8-0.8-2.4c-0.6-0.6-1.3-0.8-2.4-0.8H85L85,102.2z M85,99
+			h3.6c1.2,0,2-0.2,2.6-0.7c0.6-0.5,0.8-1.2,0.8-2.2c0-0.9-0.3-1.7-0.8-2.2c-0.6-0.6-1.4-0.8-2.5-0.8H85V99z"/>
+		<path fill="#FFFFFF" d="M113.7,101.4h-8.5v5.8h10v3.2h-14.1V89.9h14V93h-9.9v5.2h8.5V101.4z"/>
+		<path fill="#FFFFFF" d="M124.2,89.9l5.2,15.1h0.1l5.3-15.1h5.4v20.5h-4.1v-6.1l0.4-9.1l-0.1,0l-5.5,15.2h-2.8l-5.5-15.1l-0.1,0
+			l0.4,9v6.1h-4.1V89.9H124.2z"/>
+		<path fill="#FFFFFF" d="M149.6,110.4h-4.1V89.9h4.1V110.4z"/>
+		<path fill="#FFFFFF" d="M165.9,105c0-0.8-0.3-1.4-0.8-1.9c-0.6-0.5-1.5-0.9-2.9-1.4c-2.5-0.7-4.3-1.5-5.5-2.5
+			c-1.3-1-1.9-2.3-1.9-4c0-1.7,0.7-3.1,2.2-4.1s3.3-1.6,5.5-1.6c2.3,0,4.1,0.6,5.5,1.8c1.4,1.2,2.1,2.7,2.1,4.4l0,0.1h-4
+			c0-0.9-0.3-1.7-0.9-2.3c-0.6-0.6-1.5-0.9-2.7-0.9c-1.1,0-1.9,0.2-2.5,0.7c-0.6,0.5-0.9,1.1-0.9,1.9c0,0.7,0.3,1.3,1,1.7
+			c0.6,0.4,1.7,0.9,3.3,1.4c2.3,0.6,4,1.5,5.1,2.5c1.2,1,1.7,2.4,1.7,4.1c0,1.8-0.7,3.2-2.1,4.2c-1.4,1-3.2,1.5-5.5,1.5
+			c-2.2,0-4.2-0.6-5.8-1.7c-1.7-1.1-2.5-2.8-2.4-4.8l0-0.1h4c0,1.2,0.4,2.1,1.1,2.7c0.8,0.6,1.8,0.8,3.1,0.8c1.1,0,2-0.2,2.6-0.7
+			C165.6,106.4,165.9,105.8,165.9,105z"/>
+		<path fill="#FFFFFF" d="M186.9,101.4h-8.5v5.8h10v3.2h-14.1V89.9h14V93h-9.9v5.2h8.5V101.4L186.9,101.4z"/>
+	</g>
+</g>
+<path d="M11.5,81.9v36.4h36.4V81.9H11.5z M46.6,117.1H12.8V83.2h33.8V117.1z"/>
+</svg>
+</a>
+          <div class="hamburger off">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+          <div class="menu">
+            <a href="../whatwedo/index.html" class="item activeMenu">
+              <div class="copy">What We Do</div>
+            </a>
+            <a href="../ourteam/index.html" class="item">
+            <div class="copy">Our Team</div>
+            </a>
+            <a href="../thenetwork/index.html" class="item">
+              <div class="copy">The Network</div>
+            </a>
+          </div>
+          <div class="clear"></div>
+          <div class="mobilemenu off">
+            <div class="inner">
+              <div class="page page1 on">
+                <!--a.item(href="#{rootdir}" + (c.index ? 'index.html': '') + "#tech").copy Our Technology
+                -->
+                <!--a.item(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#cap").copy Our Capabilities
+                -->
+                <!--a.item(href="#{rootdir}#grid").copy Our Stories
+                --><a href="../whatwedo/index.html" class="item">
+                  <div class="copy">What We Do</div></a>
+                  <a href="../thenetwork/index.html" class="item">
+                  <div class="copy">The Network</div></a>            
+                <a href="../ourteam/index.html" class="item">
+                  <div class="copy">Our Team</div></a>
+                  <a href="../contact/index.html" class="item">
+                  <div class="copy">Contact</div></a>
+              </div>
+              <div class="page page2 off">
+                <div class="aboutitem item">
+                  <div class="carrot left"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 19 10.7" enable-background="new 0 0 19 10.7" xml:space="preserve">
+<path stroke-miterlimit="10" d="M15.8,2.6c0.1-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2-0.1-0.3
+	c-0.2-0.2-0.4-0.2-0.6,0L9.5,7.8L3.7,2.1c-0.2-0.2-0.4-0.2-0.6,0C3,2.2,3,2.5,3.2,2.6l6,6c0.2,0.2,0.4,0.2,0.6,0L15.8,2.6z"/>
+</svg>
+
+                  </div>
+                  <div class="copy"></div>
+                </div><a href="../about/index.html" class="item">
+                  <div class="copy">Leadership</div></a><a href="../press/index.html" class="item">
+                  <div class="copy">Press</div></a><a href="https://medium.com/@premisedata" target="_blank" class="item">
+                  <div class="copy">Blog</div></a><a href="../careers/index.html" class="item">
+                  <div class="copy">Careers</div></a>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fade off"></div>
+      <div class="herowhatwedo outerShadowBottom">
+        <div class="inner">
+          <div class="title">We map reality on the ground.</div>
+          <div class="subtitle">Human-directed and machine-refined, Premise indexes and analyzes millions of observations captured daily by our global network of contributors, unearthing connections that impact global decisions.</div>
+        </div>
+      </div>
+
+
+      <div name="grid" class="grid section section_grid">
+        <a href="http://blog.premise.com/data/science/2014/08/06/holiday-feasts-in-nigeria/" title="Tracking the price divergence for meats and sweets in Kano and Lagos during Ramadan" class="cell">
+          <img class="storyImage" src="../img/storiesgrid/storiesgrid_1.jpg" />
+          <div class="storyHover">
+            <div class="cinner">
+              <div class="copy">Tracking the price divergence for meats and sweets in Kano and Lagos during Ramadan</div>
+            </div>
+          </div>
+          <div class="storyInfo">
+            <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+            <span class="storyLocation">Nigeria</span>
+            <div class="storyCTA blogPost">READ BLOG POST</div>
+          </div>
+        </a>
+        <a href="../case/index.html#3" title="Piercing the Grey Market Veil" class="cell">
+          <img class="storyImage" src="../img/storiesgrid/storiesgrid_2.jpg" />
+          <div class="storyHover">
+            <div class="cinner">
+              <div class="copy">Piercing the Grey Market Veil</div>
+            </div>
+          </div>
+          <div class="storyInfo">
+            <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+            <span class="storyLocation">Vietnam</span>
+            <div class="storyCTA caseStudy">READ CASE STUDY</div>
+          </div>
+        </a>
+        <a href="http://blog.premise.com/data/science/2014/09/15/politics-storage-and-food-prices-in-india/" title="Discerning the economic effects of drought, new policies and poor cold storage infrastructure in India." class="cell">
+          <img class="storyImage" src="../img/storiesgrid/storiesgrid_3.jpg" />
+          <div class="storyHover">
+            <div class="cinner">
+              <div class="copy">Discerning the economic effects of drought, new policies and poor cold storage infrastructure in India.</div>
+            </div>
+          </div>
+          <div class="storyInfo">
+            <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+            <span class="storyLocation">India</span>
+            <div class="storyCTA blogPost">READ BLOG POST</div>
+          </div>
+        </a>
+        <a href="../case/index.html#2" title="Pioneering a set of alternative economic indicators in global markets" class="cell">
+          <img class="storyImage" src="../img/storiesgrid/storiesgrid_4.jpg" />
+          <div class="storyHover">
+            <div class="cinner">
+              <div class="copy">Pioneering a set of alternative economic indicators in global markets</div>
+            </div>
+          </div>
+          <div class="storyInfo">
+            <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+            <span class="storyLocation">Brazil</span>
+            <div class="storyCTA caseStudy">READ CASE STUDY</div>
+          </div>
+        </a>
+        <a href="../case/index.html#1" title="Helping investors bring electricity to the first mile in Sub-Saharan Africa" class="cell">
+          <img class="storyImage" src="../img/storiesgrid/storiesgrid_5.jpg" />
+          <div class="storyHover">
+            <div class="cinner">
+              <div class="copy">Helping investors bring electricity to the first mile in Sub-Saharan Africa</div>
+            </div>
+          </div>
+          <div class="storyInfo">
+            <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+            <span class="storyLocation">East Africa</span>
+            <div class="storyCTA caseStudy">READ CASE STUDY</div>
+          </div>
+        </a>
+        <a href="http://blog.premise.com/data/science/2014/09/26/introducing-premise-coca-cola-index/" title="Found on nearly every every market shelf globally, Coca-Cola is bellwether for a country's economic health" class="cell">
+          <img class="storyImage" src="../img/storiesgrid/storiesgrid_6.jpg" />
+          <div class="storyHover">
+            <div class="cinner">
+              <div class="copy">Found on nearly every every market shelf globally, Coca-Cola is bellwether for a country's economic health</div>
+            </div>
+          </div>
+          <div class="storyInfo">
+            <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+            <span class="storyLocation">China</span>
+            <div class="storyCTA blogPost">READ BLOG POST</div>
+          </div>
+        </a>
+        <a href="../case/index.html#4" title="Tracking the cost of feeding 200 million people" class="cell">
+          <img class="storyImage" src="../img/storiesgrid/storiesgrid_7.jpg" />
+          <div class="storyHover">
+            <div class="cinner">
+              <div class="copy">Tracking the cost of feeding 200 million people</div>
+            </div>
+          </div>
+          <div class="storyInfo">
+            <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+            <span class="storyLocation">Nigeria, Ghana</span>
+            <div class="storyCTA caseStudy">READ CASE STUDY</div>
+          </div>
+        </a>
+        <a href=" http://blog.premise.com/data/science/2014/11/10/liberia-update/" title="Determining Ebola’s impact on food prices in markets across Monrovia, Liberia" class="cell">
+          <img class="storyImage" src="../img/storiesgrid/storiesgrid_8.jpg" />
+          <div class="storyHover">
+            <div class="cinner">
+              <div class="copy">Determining Ebola’s impact on food prices in markets across Monrovia, Liberia</div>
+            </div>
+          </div>
+          <div class="storyInfo">
+            <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+            <span class="storyLocation">Liberia</span>
+            <div class="storyCTA blogPost">READ BLOG POST</div>
+          </div>
+        </a>
+        <a href="http://blog.premise.com/data/science/2014/12/22/UN-FAO/" title="FAO determines Premise’s data in Brazil can predict food trends 25 days in advance" class="cell hiddenCell">
+          <img class="storyImage" src="../img/storiesgrid/storiesgrid_9.jpg" />
+          <div class="storyHover">
+            <div class="cinner">
+              <div class="copy">FAO determines Premise’s data in Brazil can predict food trends 25 days in advance</div>
+            </div>
+          </div>
+          <div class="storyInfo">
+            <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+            <span class="storyLocation">Brazil</span>
+            <div class="storyCTA blogPost">READ BLOG POST</div>
+          </div>
+        </a>
+        <a href="http://blog.premise.com/data/science/2014/10/02/posters/" title="Documenting the concentration of political posters in 8 cities during the 2014 Brazilian elections" class="cell hiddenCell">
+          <img class="storyImage" src="../img/storiesgrid/storiesgrid_10.jpg" />
+          <div class="storyHover">
+            <div class="cinner">
+              <div class="copy">Documenting the concentration of political posters in 8 cities during the 2014 Brazilian elections</div>
+            </div>
+          </div>
+          <div class="storyInfo">
+            <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+            <span class="storyLocation">Brazil</span>
+            <div class="storyCTA blogPost">READ BLOG POST</div>
+          </div>
+        </a>
+        <div class="clear"></div>
+        <div id="showMore">SHOW MORE STORIES</div>
+      </div>
+
+
+      <div class="what animate-in">
+        <div class="copyblock">
+          <div class="copy copybold blue">Global. Precise. Rigorous.</div>
+          <div class="copy copylight">Access wherever you need it.</br>Down to the grain.</br>Connecting the micro to macro.</div>
+        </div>
+      </div>
+      <div class="wwdImageWrapper" id="wwdImage1">
+        <img class="wwdImage animate-in" src="../img/whatwedo/query.png" />
+        <div class="wwdTextBox right animate-in" data-os-animation-delay=".4s">
+          <div class="title">QUERY</div>
+          <div class="desc">Decision-makers identify questions to answer</div>
+          <img class="icon" src="../img/whatwedo/question.svg" />
+          <div class="footnote">
+            <span class="blue">How do you discern the percentage of electrified homes in this East African neighborhood when satellites or drones aren't up to the task?</span>
+          </div>
+        </div>
+      </div>
+      <div class="wwdImageWrapper" id="wwdImage2">
+        <img class="wwdImage animate-in" src="../img/whatwedo/schedule.png" />
+        <div class="wwdTextBox left animate-in" data-os-animation-delay=".4s">
+          <div class="title">SCHEDULE</div>
+          <div class="desc">Premise contributors are deployed to collect images and data</div>
+          <img class="icon" src="../img/whatwedo/camera.svg" />
+          <div class="footnote">
+            <span class="blue">Network contributors are tasked to collect data from specific areas of interest</span>
+          </div>
+          <img class="icon" src="../img/whatwedo/time.svg" />
+        </div>
+      </div>
+      <div class="wwdImageWrapper" id="wwdImage3">
+        <img class="wwdImage animate-in" src="../img/whatwedo/analyze.png" />
+        <div class="wwdTextBox right animate-in" data-os-animation-delay=".4s">
+          <div class="title">ANALYZE</div>
+          <div class="desc">Machine learning algorithms monitor data streams in real-time, refining sampling design</div>
+          <img class="icon" src="../img/whatwedo/warning.svg" />
+          <div class="footnote">
+            <span class="blue">Anomaly: This house appears to be unelectrified because it doesn't have an overhead drop-line but a revisit determines the house has electricity.</span>
+          </div>
+        </div>
+      </div>
+      <div class="wwdImageWrapper last" id="wwdImage4">
+        <img class="wwdImage animate-in" src="../img/whatwedo/discover.png" />
+        <div class="wwdTextBox left animate-in" data-os-animation-delay=".4s">
+          <div class="title">DISCOVER</div>
+          <div class="desc">Indices, condition reports, maps and data feeds are published in real-time, layered with contextualization to show human impact.</div>
+          <img class="icon" src="../img/whatwedo/question.svg" />
+          <div class="footnote">
+            <span class="blue">More than 50 homes in this neighborhood have electricity, a combination of visible drop-lines and underground wiring discerned by layering analytics on top of the data.</span>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="clear"></div>
+      <div name="why" class="why section section_why innerShadowTop">
+        <div class="copyblock">
+          <div class="copybold">Map your world.</br>Get started with Premise.</div>
+        </div>
+        <div class="contact">
+          <div class="copyblock"></div><a href="./contact/index.html" class="cta contact">
+            <div class="copy">CONTACT US</div></a>
+        </div>
+      </div>
+
+
+      <div class="bottomImage">
+        <div class="inner">
+          <div class="title">Learn about the Network.</div>
+          <a class="subtitle" href="../thenetwork/index.html">
+            <span>GO</span>
+            <img class="arrowIcon" src="../img/whatwedo/arrow.svg" />
+          </a>
+        </div>
+      </div>
+
+
+      <div class="footer">
+        <div class="inner">
+          <div class="sitemaps">
+              <div class="sitemap">
+                <a href="https://medium.com/@premisedata" target="_blank" class="item">Blog</a>
+              </div>
+              <div class="sitemap">
+                <a href="../press/index.html" class="item">Press</a>
+              </div>
+              <div class="sitemap">
+                <a href="../faq/index.html" class="item">FAQ</a>
+              </div>
+              <div class="sitemap">
+                <a href="../contact/index.html" class="item">Contact Us</a>
+              </div>
+          </div>
+          <div class="left">
+            <div class="icons"><a href="mailto:info@premise.com" class="icon first icon_mail"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="51px" height="51px" viewBox="0 0 51 51" enable-background="new 0 0 51 51" xml:space="preserve">
+<g>
+  <path fill="#FFFFFF" d="M12.1,15.1v20.8h26.9V15.1H12.1z M13.4,19.5l7.8,5.8l-7.8,5.8V19.5z M13.4,32.8l8.9-6.7l3.2,2.4l3.2-2.4
+    l8.9,6.7v1.5H13.4V32.8z M37.7,31.1l-7.8-5.8l7.8-5.8V31.1z M37.7,17.8l-12.2,9.1l-12.2-9.1v-1h24.3V17.8z"/>
+  <rect x="1" y="1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="49" height="49"/>
+</g>
+</svg>
+</a><a href="https://twitter.com/premisedata" target="_blank" class="icon icon_twitter"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="51px" height="51px" viewBox="0 0 51 51" enable-background="new 0 0 51 51" xml:space="preserve">
+<rect x="1" y="1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="49" height="49"/>
+<g>
+  <path fill="#FFFFFF" d="M36.5,16.4c-0.9,0.5-1.9,0.9-3,1.2c-0.9-0.9-2.1-1.5-3.5-1.5c-2.6,0-4.8,2.1-4.8,4.8c0,0.4,0,0.7,0.1,1.1
+    c-4-0.2-7.5-2.1-9.8-5c-0.4,0.7-0.6,1.5-0.6,2.4c0,1.7,0.8,3.1,2.1,4c-0.8,0-1.5-0.2-2.2-0.6c0,0,0,0,0,0.1c0,2.3,1.6,4.2,3.8,4.7
+    c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,1.9,2.4,3.3,4.4,3.3c-1.6,1.3-3.7,2-5.9,2c-0.4,0-0.8,0-1.1-0.1
+    c2.1,1.4,4.6,2.1,7.3,2.1c8.8,0,13.6-7.3,13.6-13.6c0-0.2,0-0.4,0-0.6c0.9-0.7,1.7-1.5,2.4-2.5c-0.9,0.4-1.8,0.6-2.7,0.7
+    C35.4,18.5,36.1,17.5,36.5,16.4z"/>
+</g>
+</svg>
+</a><a href="https://www.linkedin.com/company/premise-data-corporation" target="_blank" class="icon icon_li"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="51px" height="51px" viewBox="0 0 51 51" enable-background="new 0 0 51 51" xml:space="preserve">
+<rect x="1" y="1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="49" height="49"/>
+<g>
+  <rect class="rectfill" x="14.3" y="21.6" fill="#FFFFFF" width="4.8" height="15.5"/>
+  <circle fill="#FFFFFF" cx="16.7" cy="16.7" r="2.8"/>
+  <path fill="#FFFFFF" d="M37.1,28.6c0-4.2-0.9-7.4-5.8-7.4c-2.3,0-3.9,1.3-4.6,2.5h-0.1v-2.1h-4.6v15.5h4.8v-7.7c0-2,0.4-4,2.9-4
+    c2.5,0,2.5,2.3,2.5,4.1v7.5h4.8V28.6z"/>
+</g>
+</svg>
+</a><a href="https://www.facebook.com/premisedata" target="_blank" class="icon icon_fb"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="51px" height="51px" viewBox="0 0 51 51" enable-background="new 0 0 51 51" xml:space="preserve">
+<rect x="1" y="1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="49" height="49"/>
+<g>
+  <path fill="#FFFFFF" d="M22.4,37.1h4.8c0,0,0-6.4,0-11.6h3.3l0.4-4.1h-3.7V19c0-0.9,0.6-1.1,1-1.1s2.6,0,2.6,0v-4l-3.6,0
+    c-4,0-4.9,3-4.9,4.9v2.7h-2.3v4.1h2.3C22.4,30.8,22.4,37.1,22.4,37.1z"/>
+</g>
+</svg>
+</a><a href="http://instagram.com/premisedata" target="_blank" class="icon last icon_insta"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="51px" height="51px" viewBox="0 0 51 51" enable-background="new 0 0 51 51" xml:space="preserve">
+<rect x="1" y="1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="49" height="49"/>
+<g>
+  <path fill="#FFFFFF" d="M32.6,13.9H18.4c-2.5,0-4.5,2-4.5,4.5v4.7v9.5c0,2.5,2,4.5,4.5,4.5h14.2c2.5,0,4.5-2,4.5-4.5v-9.5v-4.7
+    C37.1,15.9,35.1,13.9,32.6,13.9z M33.9,16.6l0.5,0v0.5v3.4l-3.9,0l0-3.9L33.9,16.6z M22.2,23.1c0.7-1,1.9-1.7,3.3-1.7
+    c1.4,0,2.6,0.7,3.3,1.7c0.5,0.7,0.8,1.5,0.8,2.4c0,2.3-1.8,4.1-4.1,4.1c-2.3,0-4.1-1.8-4.1-4.1C21.4,24.6,21.7,23.8,22.2,23.1z
+     M34.9,32.6c0,1.2-1,2.2-2.2,2.2H18.4c-1.2,0-2.2-1-2.2-2.2v-9.5h3.5c-0.3,0.7-0.5,1.5-0.5,2.4c0,3.5,2.8,6.3,6.3,6.3
+    c3.5,0,6.3-2.8,6.3-6.3c0-0.8-0.2-1.6-0.5-2.4h3.5V32.6z"/>
+</g>
+</svg>
+</a>
+              <div class="clear"></div>
+            </div>
+            <div class="copyright desktop">&copy; 2015 Premise</div>
+            <div class="clear"></div>
+          </div>
+          <div class="right">
+            
+            <div class="signup">
+              <div class="title">Subscribe to our newsletter</div>
+              <form class="signupform">
+                <input type="text" name="email" placeholder="Email Address" class="email">
+                <input type="submit" value="Sign Up" class="submit">
+                <div class="clear"></div>
+              </form>
+            </div>
+            
+          </div>
+          <div class="clear"></div>
+          <div class="copyright mobile">&copy; 2015 Premise</div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function loadercomplete() {
+        Global.i()
+      }
+    </script>
+
+    <script type="text/javascript">
+      Loader.scripts.jst_lib.push('jquery.min');
+      Loader.scripts.jst_lib.push('jquery.waypoints.min');
+      Loader.scripts.jst.push('status');
+      Loader.scripts.jst.push('main');
+      Loader.scripts.jst.push('global');
+      
+      Loader.i( function(result) {
+        if (result) {
+      
+          if (typeof(loadercomplete) === 'function') {
+
+            function onScrollInit( items, trigger ) {
+              items.each( function() {
+                var osElement = $(this),
+                    osAnimationClass = "slideUp",
+                    osAnimationDelay = osElement.attr('data-os-animation-delay');
+                  
+                    osElement.css({
+                      '-webkit-animation-delay':  osAnimationDelay,
+                      '-moz-animation-delay':     osAnimationDelay,
+                      'animation-delay':          osAnimationDelay
+                    });
+
+                    var osTrigger = ( trigger ) ? trigger : osElement;
+                    
+                    osTrigger.waypoint(function() {
+                      osElement.addClass('animated').addClass(osAnimationClass);
+                      },{
+                          offset: '70%'
+                    });
+              });
+            }
+            onScrollInit( $('.what'));
+            onScrollInit( $('#wwdImage1 .wwdImage'), $('#wwdImage1') );
+            onScrollInit( $('#wwdImage1 .wwdTextBox'), $('#wwdImage1') );
+            onScrollInit( $('#wwdImage2 .wwdImage'), $('#wwdImage2') );
+            onScrollInit( $('#wwdImage2 .wwdTextBox'), $('#wwdImage2') );
+            onScrollInit( $('#wwdImage3 .wwdImage'), $('#wwdImage3') );
+            onScrollInit( $('#wwdImage3 .wwdTextBox'), $('#wwdImage3') );
+            onScrollInit( $('#wwdImage4 .wwdImage'), $('#wwdImage4') );
+            onScrollInit( $('#wwdImage4 .wwdTextBox'), $('#wwdImage4') );
+
+            loadercomplete();
+          }
+      
+        }
+      
+      });
+      
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-42877362-8']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      
+      
+    </script>
+  </body>
+</html>

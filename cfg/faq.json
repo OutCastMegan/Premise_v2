@@ -1,0 +1,133 @@
+[
+  {
+    "cat": "General",
+    "question": "How many countries do you operate?",
+    "answer": "We’re currently in more than 30 countries across six continents."
+  },
+  {
+    "cat": "General",
+    "question": "How do you decide which countries you’ll start a network in next?",
+    "answer": "These decisions are generally customer-driven depending on their data needs. There are also some networks we spin up out of our own desire to create greater societal transparency. Our work in Liberia and Venezuela are two examples of that."
+  },
+  {
+    "cat": "Data",
+    "question": "How do you capture the data?",
+    "answer": "Each data point is captured via mobile phone by one of our network contributors in the field. The majority of our contributors use Android phones."
+  },
+  {
+    "cat": "Data",
+    "question": "How do you figure out what kinds of data to capture? It’s not only about food data, right?",
+    "answer": "We gather much more data beyond food prices. Our network and data collection platform are flexible and scalable, meaning we can task the network with a myriad of assignments that our customers and partners request, or which we as a company find valuable.  <br /><br /> Our recent work in Liberia is one example – we felt compelled to help with the Ebola crisis so we spun up a network to help provide critical data to aid organizations. In Brazil, we recently tracked the frequency of political posters and advertisements in the run-up to the October 2014 presidential elections. We’re also doing some interesting work in Africa related to electrification in remote regions. Any data that can be captured by a mobile phone and which has societal value is fair game for us."
+  },
+  {
+    "cat": "Data",
+    "question": "What kinds of data can you extract from an image?",
+    "answer": "There’s lots of data we can extract including the quality of perishables, sales configurations, building materials, roof types, the number of units on display, whether something is on sale or not, the shelf context (e.g. products sold nearby).  <br /><br /> We also capture brand name, price, store name, quantity and timestamp. In aggregate, this metadata enables us to correlate things like inflation, market share, and product availability as a bellwether for possible food shortages. In other contexts, we can also discern possible medical supply shortages and supply chain bottlenecks."
+  },
+  {
+    "cat": "Data",
+    "question": "Can anyone download and use the Premise app to capture data?",
+    "answer": "Yes. The app is free and available to download in the Google Play store for the more than 30 countries where we have networks. Once someone downloads the app or responds to one of our advertisements, they can apply to become a contributor through our application."
+  },
+  {
+    "cat": "Data",
+    "question": "How do you detect fraudulent data?",
+    "answer": "We’ve developed algorithms in-house to detect fraud and go to great lengths to ensure the quality of our data. Our methodology consists of a combination of automated machine learning techniques and input from human experts."
+  },
+  {
+    "cat": "Data",
+    "question": "What are some of the reasons a data submission would be rejected?",
+    "answer": "Sometimes the photo doesn’t match the task. For example, if the task asks for a photo of rice, a photo of apples will be rejected. Or, if the photo location doesn’t match the requested location and/or if a task asks for the price of a kilo of rice but the photo shows the quantity instead, these will also be rejected."
+  },
+  {
+    "cat": "Data",
+    "question": "How do you build your indices?",
+    "answer": "An index should reflect the average price of some basket of goods over time. Official statistical agencies such as the U.S, Bureau of Labor Statistics provide documentation regarding the composition of that basket, but rarely at the product level. We choose the products that underlie each country-level index via an iterative process with our data contributors and in-house country experts.  <br /><br /> Given this set of products, we design a sampling strategy that delivers a representative sample of prices for that basket. Integral to this strategy is directing contributors to capture observations in such a way that accounts for the distribution of economic activity across geography and type of store (e.g. a national chain versus an outdoor market). For more information, visit: https://data.premise.com/documentation"
+  },
+  {
+    "cat": "Data",
+    "question": "How does your sampling methodology work?",
+    "answer": "Our sampling methodology for our macroeconomic research closely follows that used by official statistical agencies such as the U.S. Bureau of Labor Statistics, with country specific adjustments made as necessary. We direct our contributors to capture data in such a way that we can make like-for-like comparisons over time. This ensures that the set of products and the locations where captures are taken are close to fixed over time. Hence the sample underlying any index is constant throughout time. For more information, you can read our documentation and methodologies here."
+  },
+  {
+    "cat": "Data",
+    "question": "Are your indices solely comprised of Premise’s data or are there other data sources mixed in?",
+    "answer": "Our indices are currently comprised of data from Premise only."
+  },
+  {
+    "cat": "Data",
+    "question": "How closely does Premise’s data correlate to official numbers?",
+    "answer": "It depends on the country. There are some places where we’re highly correlated and other places where there’s significant discrepancy. We expect this variance -- it means we’re doing our job. In the U.S., our numbers are highly correlated, it’s just that ours come out much faster than the official number."
+  },
+  {
+    "cat": "Data",
+    "question": "Do you do any web scraping to supplement your offline data capture?",
+    "answer": "We have the capacity to do this but it’s not included in any of the indices we currently syndicate."
+  },
+  {
+    "cat": "Technology",
+    "question": "How does the platform work from a technical perspective?",
+    "answer": "Our survey and mapping platform encapsulates data collection, data collection scheduling, signal interpretation and analytics, and data delivery. It generally works in the following five steps: <br /><br /> <ul> <li>Query: Decision-makers from financial services and CPG to tech and retail identify and define critical global metrics, and formulate questions they need answered. For example: Which populations in Kano are being deprived of electricity or are shelves stocked with the right product in Harare or is it counterfeit? </li> <li>Schedule: The customer’s campaign is scheduled onto the Premise network, deploying contributors in the field to collect on-the-ground visual documentation, surveys and data tailored to the relevant geographic and coverage parameters.</li> <li>Optimize: Premise machine learning algorithms monitor the observation stream in real-time, continually optimizing the campaign allocation and targeting parameters, refining the sampling design and assigning more resources as needed.</li> <li>Analyze: In tandem, Premise monitors the campaign at scale, surfacing trends, patterns and anomalies in the data which are then layered with a set of predictive analytics.</li> <li>Discover: Aggregate indices, condition reports, trend maps and data feeds are published in real-time, layered with contextualization to quantify and qualify human impact. </li> </ul>"
+  },
+  {
+    "cat": "Technology",
+    "question": "How do you operate in areas that have weak cellular infrastructure?",
+    "answer": "We’ve explicitly built our application with weak connectivity in mind. It’s also built to work both online and offline. Our contributors can capture data without 3G, LTE, EDGE or Wi-Fi access. However, in order to refresh a task request or submit photos/data, an Internet connection is required."
+  },
+  {
+    "cat": "Technology",
+    "question": "How does your machine-learning technology work?",
+    "answer": "Premise is a data-driven company at its core, and we rely on modern machine learning techniques at all levels of the platform, from adaptive task scheduling to fraud detection to image analysis."
+  },
+  {
+    "cat": "Network",
+    "question": "How many contributors are in your network?",
+    "answer": "We have thousands of contributors around the globe."
+  },
+  {
+    "cat": "Network",
+    "question": "What demographic information do you have on your contributors?",
+    "answer": "As part of a contributor’s account creation, they’re asked to authenticate with a Facebook or Google+ account, so we know each contributor’s name, location, age and gender."
+  },
+  {
+    "cat": "Network",
+    "question": "How do you know a contributor is trustworthy?",
+    "answer": "Since our contributors have varying degrees of technical expertise, ensuring data integrity is a major focus. Post-capture, on-the-ground observations are submitted to a rigorous quality control process which is designed to eliminate noise introduced by both accidental and deliberate contributor error (fraud). The methodology consists of a combination of automated machine learning techniques and input from human experts."
+  },
+  {
+    "cat": "Network",
+    "question": "How much is each contributor paid?",
+    "answer": "We pay contributors for every approved data capture they complete. Exact payment varies based on the complexity of the task and urgency of completion."
+  },
+  {
+    "cat": "Network",
+    "question": "How do you recruit people to the network?",
+    "answer": "We find people in two primary ways: the first is online acquisition and the second is word of mouth. We have mechanisms built into the app to make referrals as seamless as possible."
+  },
+  {
+    "cat": "Network",
+    "question": "How do you train contributors?",
+    "answer": "We start them off with simple tasks to help help familiarize them with the process of capturing information. As they complete more tasks, we assess each submission and send feedback through the app when a task isn’t properly completed."
+  },
+  {
+    "cat": "Network",
+    "question": "How do you pay your contributors?",
+    "answer": "Contributors are compensated in a number of ways but primarily in mobile cash or mobile recharge (top-ups)."
+  },
+  {
+    "cat": "Network",
+    "question": "How quickly do you pay for your contributors?",
+    "answer": "Network within 24 hours."
+  },
+  {
+    "cat": "Network",
+    "question": "What are the biggest challenges to building networks in the developing world?",
+    "answer": "Figuring out the cultural and societal norms in all of the different countries in which we operate. And it’s not just by country that things vary widely, cities within a country can vary dramatically -- say, Kano vs. Lagos, Nigeria. The cultural norms and habits of people can even vary by neighborhood within a particular city. It’s important we capture all of this as authentically as we can because it means uncovering more useful and more valuable data."
+  },
+  {
+    "cat": "Network",
+    "question": "How accurate is the geolocation on the phones most contributors are using?",
+    "answer": "We use two factors to verify geo-location. We capture the GPS location of the phone when the user captures a photo, and also ask the user to check-in to the shop or location. We compare the coordinates of each and ensure that they are within a reasonable variance."
+  }
+]
+

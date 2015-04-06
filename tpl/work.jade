@@ -1,0 +1,79 @@
+
+extends layout
+
+block variables
+  - var section = 'work'
+  - var rootdir = '../'
+
+block content
+
+  .container
+
+    include header
+
+    .herowork
+      .inner
+        .title <span class="bigger">Work with Us.</span>  <br />Take pictures. Earn money.
+
+    .copyblock.contributors
+      .copy.copylight Our mission is to improve people’s communities and livelihoods around the world by increasing economic and societal transparency. Seeing the world through your lens helps us do that.
+
+    .locs
+
+      .title OUR NETWORK LOCATIONS
+
+      .map#map
+        img(src='../img/mmap.jpg')
+
+    .testis
+      .copyblock
+        .copy.copybold TESTIMONIALS
+
+      .testi.left
+        .image
+          img(src='../img/bio/deepti_reddy.png')
+        .name DEEPTI REDDY
+        .loc Jakarta, Indonesia
+        .quote "I joined Premise because I was very interested to learn how pricing works across stores. I’ve come to love meeting supermarket staff to better understand how food pricing works."
+        .clear
+
+       .testi.right
+        .image
+          img(src='../img/bio/tan_hoang.png')
+        .name TAN HOANG 
+        .loc Hanoi, Vietnam
+        .quote "I love Premise’s flexibility, which helps me earn additional money in my free time."
+        .clear
+
+       .testi.left
+        .image
+          img(src='../img/bio/magaji_ismail_yareema.png')
+        .name MAGAJI ISMAIL YAREEMA
+        .loc Kano, Nigeria
+        .quote "I joined Premise to get more work experience and also because the extra money helps me pay for things for my family that I wouldn’t ordinarily be able to afford."
+        .clear
+
+    .get
+
+      .block.left
+        .inner
+          .title Become a Contributor
+          a.cta(href='#{rootdir}start/' + ( c.index ? 'index.html' : ''))
+            .copy LEARN MORE
+
+      .block.right
+        .inner
+          include download
+      .clear
+
+    include footer
+
+  script(src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js')
+  link(href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css',rel='stylesheet')
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      mapboxToken = '#{c.mapbox}';
+      Loader.load('#{rootdir}jst/work.js', 'Work');
+      Global.i()
+    }

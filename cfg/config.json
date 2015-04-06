@@ -1,0 +1,91 @@
+
+{
+
+  "cfg": {
+    "url": "http://premise.oclabs.net/",
+    "index": true,
+    "meta": {
+      "title": "Premise Data",
+      "description": "Premise provides real-time data and on the ground intelligence powered by our global network of contributors."
+    },
+
+    "mapbox": "pk.eyJ1Ijoiam9lcmFpaSIsImEiOiJValNfRlY0In0.LZvv1vwL7FH7NAzFDmZFow",
+    "analytics": "UA-42877362-8",
+    "press": {
+      "article": [
+        {
+        "source": "Fast Company",
+        "title": "The World’s Top 10 Most Innovative Companies of 2015 in Money",
+        "date": "02.09.15",
+        "link": "http://www.fastcompany.com/3041657/most-innovative-companies-2015/the-worlds-top-10-most-innovative-companies-of-2015-in-money"
+        },
+        {
+        "source": "The Wall Street Journal",
+        "title": "China inflation drops to five-year low in January",
+        "date": "02.09.15",
+        "link": "http://www.wsj.com/articles/china-inflation-drops-to-five-year-low-in-january-1423533186?KEYWORDS=richard+silk"
+        },
+        {
+          "date": "01.20.15",
+          "source": "DLD (VIDEO)",
+          "title": "Premise CEO David Soloff on stage at DLD",
+          "link": "https://www.youtube.com/watch?v=8eL9XwB2fwo#t=176"
+        },
+        {
+          "date": "12.10.14",
+          "source": "The Wall Street Journal",
+          "title": "China Inflation Softens to Five-Year Low",
+          "link": "http://www.wsj.com/articles/china-inflation-softens-to-five-year-low-1418176958"
+        },
+        {
+          "date": "12.07.14",
+          "source": "The Wall Street Journal",
+          "title": "U.S. Sugar Soars Above World Prices",
+          "link": "http://www.wsj.com/articles/u-s-sugar-soars-above-world-prices-1417999637?KEYWORDS=alexandra+wexler"
+        },
+       {
+          "date": "11.20.14",
+          "source": "The Wall Street Journal",
+          "title": "Startups mine market-moving data from fields, parking lots -- even shadows",
+          "link": "http://online.wsj.com/articles/startups-mine-market-moving-data-from-fields-parking-lotseven-shadows-1416502993?mod=WSJ_hp_RightTopStories"
+        },
+        {
+          "date": "09.15.14",
+          "source": "The Economist",
+          "title": "Off the map: Rich countries are deulged with data; developing ones are suffering from drought",
+          "link": "http://www.economist.com/news/international/21632520-rich-countries-are-deluged-data-developing-ones-are-suffering-drought?fsrc=rss%7Cint"
+        },
+        {
+          "source": "BusinessDay (Nigeria)",
+          "title": "Standard Chartered reiterates goal of Consumer Price Tracker in Nigeria",
+          "date": "09.03.14",
+          "link": "http://businessdayonline.com/2014/11/standard-chartered-reiterates-goal-of-consumer-price-tracker-in-nigeria/#.VIdSH6TF8Yd"
+        },
+        {
+          "source": "The Wall Street Journal",
+          "title": "Last-Minute Halloween Shopping? You May Find Cheaper Candy",
+          "date": "08.31.14",
+          "link": "http://blogs.wsj.com/economics/2014/10/31/last-minute-halloween-shopping-you-may-find-cheaper-candy/"
+        },
+        {
+          "source": "The Wall Street Journal (VIDEO)",
+          "title": "WSJD Live: Crowd-Sourcing Economic Data",
+          "date": "08.28.14",
+          "link": "http://www.wsj.com/video/crowd-sourcing-economic-data/5C90E32D-1984-47DF-A3A2-96D003B8AB49.html?KEYWORDS=david+soloff"
+        },
+        {
+          "source": "African Business Journal",
+          "title": "Smartphones bringing us smarter data in Africa: Standard Chartered and Premise Data launch Nigeria Consumer Price Tracker",
+          "date": "08.19.14",
+          "link": "http://www.africanbusinesscentral.com/2014/10/19/smart-phones-bringing-us-smarter-data-in-africa-standard-chartered-and-premise-data-launch-nigeria-consumer-price-tracker/"
+        }
+
+      ] 
+
+    }
+
+  }
+
+}
+
+

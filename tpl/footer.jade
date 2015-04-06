@@ -1,0 +1,43 @@
+.footer
+  .inner
+    .left
+      .sitemaps
+        .sitemap
+          .title EXPLORE
+          a.item(href="#{rootdir}case/" + (c.index ? 'index.html' : '')) Case Studies
+          a.item.stories(href="#{rootdir}#grid") Our Stories
+          a.item(href="https://medium.com/@premisedata",target="_blank") Blog
+        .sitemap
+          .title COMPANY
+          a.item(href="#{rootdir}about/" + (c.index ? 'index.html' : '')) About
+          a.item(href="#{rootdir}press/" + (c.index ? 'index.html' : '')) Press
+          a.item(href="#{rootdir}faq/" + (c.index ? 'index.html' : '')) FAQ
+          a.item(href="#{rootdir}careers/" + (c.index ? 'index.html' : '')) Careers
+        .sitemap
+          .title CONTRIBUTORS
+          a.item(href="#{rootdir}work/" + (c.index ? 'index.html' : '')) The Network
+          a.item(href="#{rootdir}start/" + (c.index ? 'index.html' : '')) Get Started
+
+    .right
+      .icons
+        a.icon.first.icon_mail(href="mailto:info@premise.com")
+          include ../svg/icon_mail.svg
+        a.icon.icon_twitter(href="https://twitter.com/premisedata", target="_blank")
+          include ../svg/icon_twitter.svg
+        a.icon.icon_li(href="https://www.linkedin.com/company/premise-data-corporation", target="_blank")
+          include ../svg/icon_li.svg
+        a.icon.icon_fb(href="https://www.facebook.com/premisedata", target="_blank")
+          include ../svg/icon_fb.svg
+        a.icon.last.icon_insta(href="http://instagram.com/premisedata", target="_blank")
+          include ../svg/icon_insta.svg
+        .clear
+      .signup
+        .title NEWSLETTER SIGN UP
+        form.signupform
+          input.email(type='text',name="email",placeholder='Email Address')
+          input.submit(type='submit',value='Sign Up')
+          .clear
+
+      .copyright &copy; 2015 Premise
+    .clear
+

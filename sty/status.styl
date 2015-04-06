@@ -1,0 +1,84 @@
+
+.status
+  position fixed
+  top 1em
+  width w = 40em
+  left 50%
+  margin-left -(w/2)em
+  background-color c_prime2
+  color c_white
+  border 1px solid c_white
+  border-radius 4px
+  transition transform 0.2s ease-in, opacity 0.2s ease-out
+  transform-origin 50% 50%
+  transform-style  preserve-3d;
+  overflow hidden
+  z-index 40
+  &.on
+    opacity 1
+    transform perspective(1000px) rotateX(0deg)
+  &.off
+    opacity 0
+    transform perspective(1000px) rotateX(-90deg)
+  &.success
+    background-color c_blue
+    border 2px solid c_blue_d
+    > .label.error
+      display none
+    > .label.success
+      display block
+      background-color c_blue_d
+    > .label > svg > path
+      fill c_white
+  &.error
+    background-color c_sred
+    border 2px solid c_sred_d
+    > .label.error
+      display block
+      background-color c_sred_d
+    > .label.success
+      display none
+    > .label > svg
+      position absolute
+     
+  > .label
+    width 2.2em
+    height 2.2em
+    padding 0.4em
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    &.on
+      display block
+    &.off
+      display none
+    > svg
+      width 1.8em
+      height 1.8em
+      fill c_white
+      margin 0.2em 0 0 0.2em
+  > .copy
+    width 35em
+    margin 0.7em auto
+    > ul
+      padding 0
+      margin 0
+      > li
+        padding 0
+        margin 0
+        margin-left 2em
+        list-style-type none
+        f-prox-light()
+        font-size aitw(20)
+  > .close
+    float right
+    width 1em
+    height 1em
+    margin 1em 0.8em 0 0
+    cursor pointer
+    transition opacity 0.2s linear
+    > svg
+      width inherit
+      height inherit
+      > path
+        fill c_white

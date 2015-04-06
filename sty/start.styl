@@ -1,0 +1,113 @@
+.start
+  padding 60px 0 60px 0
+  > .download
+    margin 0 0 121px 0
+    > .title
+      padding 0 0 40px 0
+
+  > .features
+    background-color c_mono1
+    margin 60px 0
+
+    > .feature
+      padding 60px 60px 0 60px
+      max-width 1440px
+      margin auto
+
+      > .desc
+        width 50%
+        margin 100px 0 0 0
+        > .number
+          color c_blue
+          float left
+          font-size aitw(30)
+          f-proxc-bold()
+        > .line
+          background-color c_blue
+          width 90px
+          height 3px
+          float left
+          transform rotate(125deg)
+          margin 44px 0 0 -31px
+        > .copy
+           color c_white
+           margin 0 90px 0 90px
+           font-size aitw(28)
+           line-height aitw(38)
+      > .shot
+        width 50%
+        > .picture
+          width 394px
+          height 588px
+          background url('../img/shots/device.svg')
+          margin auto
+          > img
+            width 321px
+            margin 76px 0 0 35px
+      &.right
+        > .desc
+          float left
+        > .shot
+          float right
+      &.left
+        > .desc
+          float right
+        > .shot
+          float left
+    > .bottom
+      height 20px
+      border-top 1px solid c_mono2
+      border-bottom 1px solid c_mono2
+
+.faq
+  &.global
+    padding 120px 0 60px 0
+    > .questions > .block
+      border-top 2px solid c_mono2
+      border-bottom 0
+  > .title
+    text-align center
+    font-size aitw(28)
+    f-proxc-bold()
+
+  > .questions
+    padding 54px 120px
+    max-width 700px
+    margin auto
+    > .title
+      f-proxc-light()
+      font-size aitw(36)
+      text-align left
+      color c_mono2
+      padding 40px 0 20px 0
+      border-top 2px solid c_mono2
+      &:first-child
+        border-top 0
+    > .block
+      border-bottom 2px solid c_mono2
+      font-size aitw(21)
+      padding 17px 0
+      &:first-child
+        border-top 2px solid c_mono2
+      &.on
+        display block
+      &.off
+        display none
+      > .question
+        f-prox-regular()
+        cursor pointer
+        &:hover, &.blue
+          color c_blue
+      > .answer
+        f-prox-light()
+        overflow-y auto
+        transition all 0.3s ease-in-out
+        padding 0
+        font-size aitw(18)
+        &.off
+          max-height 0
+          padding-top 0
+        &.on
+          max-height 600px
+          padding-top 20px
+

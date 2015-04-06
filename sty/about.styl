@@ -1,0 +1,117 @@
+
+.people
+  border-top 1px solid c_monob
+  border-bottom 1px solid c_monob
+  background-color c_whiteb
+  padding 40px 50px 60px 50px
+
+  > .title
+    f-proxc-bold()
+    font-size aitw(30)
+    text-align center
+    padding 20px 0 60px 0
+    &.advisors
+      border-top 1px solid c_monob
+      padding 60px 0 60px 0
+      margin 90px 0 0 0
+
+  > .group
+    margin 0 0 40px 0
+    max-width 1200px
+    margin 0 auto 40px auto
+    &.leaders > .profile
+      width 50%
+    &.managers > .profile
+      width 33%
+
+    &.advisors > .profile
+      width 25%
+
+    &.leaders > .profile:first-child > .inner
+      margin 20px 40px 20px 20px
+
+    &.leaders > .profile.last > .inner
+      margin 20px 20px 20px 40px
+
+    &.leaders > .profile > .inner > .desc
+      min-height 225px
+    &.managers > .profile > .inner > .desc
+      min-height 325px
+    > .profile
+      float left
+      > .inner
+        margin 20px
+        > .picture
+          > img
+            width 100%
+            padding 5px
+            border 1px solid c_mono2
+        > .name
+          f-proxc-bold()
+          font-size aitw(20)
+          padding 40px 0 0 0
+          text-transform uppercase
+        > .title
+          font-size aitw(20)
+          color c_mono3
+          padding 5px 0 0 0
+
+        > .desc
+          margin 15px 0 0 0
+          border-top 1px solid c_monob
+          color c_mono3
+          padding 20px 0
+          font-size aitw(18)
+          line-height aitw(26)
+        > .socials
+          > .social
+            float left
+            padding 10px 10px 0 0
+            > svg > rect
+              stroke c_mono3
+            > svg > g > rect
+              fill c_mono3
+            > svg > g > circle
+              fill c_mono3
+            > svg > g > path
+              fill c_mono3
+
+.investors
+  padding 0 60px 60px 60px
+  > .image
+    width 100%
+    max-width 768px
+    margin 60px auto 0 auto
+    
+    > img
+      width inherit
+      &.desktop
+        display block
+      &.mobile
+        display none
+
+.ctas
+  margin 60px 0 0 0
+  border-top 1px solid c_monob
+  background-color #fbfbfb
+  > .inner
+    max-width 1440px
+    margin auto
+    > .acta
+      float left
+      width 33%
+      border-right 1px solid c_monob
+      &.last
+        border-right none
+      > .inner
+        margin 0 10px
+        padding 30px 30px 60px 30px
+        > .title
+          text-align center
+          font-size aitw(30)
+          padding 60px 0
+        > .cta
+          margin 0 auto 60px auto
+          width 275px
+          > .copy
+            text-align center

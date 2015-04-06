@@ -1,0 +1,26 @@
+
+extends layout
+
+block variables
+  - var section = 'error'
+  - var rootdir = '../'
+
+block content
+
+  .container
+
+    include header
+
+    .errorpage
+      .copyblock
+        .title Oh, no! The page you're looking for doesn't exist.
+        .copy Try clicking on the navigation above to find your way back.
+      //a.cta.home(href='#{rootdir}')
+        .copy Home
+    include footer
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Global.i()
+    }
+ 

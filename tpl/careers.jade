@@ -1,0 +1,94 @@
+
+extends layout
+
+block variables
+  - var section = 'careers'
+  - var rootdir = '../'
+
+block content
+
+  .container
+
+    include header
+
+    .herocareers
+      .inner
+        .title Work at Premise
+
+    .copyblock.copycareers.max.lineheight
+      .copy.copylight We’re building visionary products and systems, we move fast, and we push code daily. We also strongly value our diverse backgrounds in engineering, data science, design and economics.
+
+    .what
+
+      .copyblock.whatt
+        .copy.copybold WHAT WE’RE DOING
+
+      ul.listing
+        li.item Building a flexible, information-gathering platform on a global scale
+        li.item Making sense of an increasingly complex and interconnected world by synthesizing machine and human intelligence
+        li.item Orchestrating the efforts of a massive mobile workforce to index the physical world
+
+    .culturehero
+
+    .copyblock.ben
+      .copy.copybold BENEFITS
+
+    .benefits
+      .inner
+
+        .benefit
+          .icon
+            include ../svg/401k.svg
+          .name Equity and 401k
+
+        .benefit
+          .icon
+            include ../svg/vacation.svg
+          .name Unlimited vacation
+
+        .benefit
+          .icon
+            include ../svg/meals.svg
+          .name Daily catered meals
+
+        .benefit
+          .icon
+            include ../svg/healthcare.svg
+          .name Health, dental, vision
+
+        .benefit
+          .icon
+            include ../svg/hours.svg
+          .name Flexible hours
+
+        .benefit
+          .icon
+            include ../svg/gym.svg
+          .name Gym subsidies
+        .clear
+
+    .currentopenings
+      .title Current Openings
+
+      .openings
+
+        script(src='https://www.workable.com/assets/embed.js',type='text/javascript').
+        script(type='text/javascript',charset='utf-8').
+          whr(document).ready(function(){
+            whr_embed(11299, {detail: 'descriptions', base: 'jobs', zoom: 'city', grouping: 'none'});
+          });
+
+        #whr_embed_hook
+
+    .copyblock
+      .copy.copylight Join us to build visionary products.
+
+    a.cta.apply(href="http://premise.workable.com/")
+      .copy APPLY
+
+    include footer
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Global.i()
+    }

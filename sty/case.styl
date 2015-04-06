@@ -1,0 +1,248 @@
+
+.cases
+
+  > .loading
+    height 730px
+    background-color rgba(c_mono0, 0.8)
+    margin 0 0 730px 0
+    &.off
+      display none
+    &.on
+      display block
+
+    > .bar
+      height 120px
+      background-color c_mono0
+      margin 480px 0 0 0
+
+  > .case.case_electrification > .top
+    background-image url('../img/case/electrification_hero.png')
+  > .case.case_electrification > .observation > .image
+    background-image url('../img/case/electrification_grid.jpg')
+    height 332px
+  > .case.case_electrification > .study > .inner > .image
+    background-image url('../img/case/electrification_map.png')
+    //width 1010px
+    height 1015px
+
+  > .case.case_bloomberg > .top
+    background-image url('../img/case/bloomberg_hero.png')
+  > .case.case_bloomberg > .observation > .image
+    background-image url('../img/case/bloomberg_grid.png')
+    height 369px
+  > .case.case_bloomberg > .study > .inner > .image
+    background-image url('../img/case/bloomberg_graph.png')
+    //width 1029px
+    height 780px
+
+  > .case.case_cpg > .top
+    background-image url('../img/case/cpg_hero.png')
+  > .case.case_cpg > .observation > .image
+    background-image url('../img/case/cpg_shelves.png')
+    height 404px
+  > .case.case_cpg > .study > .inner > .image
+    background-image url('../img/case/cpg_shelves2.png')
+    //width 1006px
+    height 1138px
+
+  > .case.case_standard > .top
+    background-image url('../img/case/standard_hero.png')
+  > .case.case_standard > .observation > .image
+    background-image url('../img/case/standard_grid.png')
+    height 364px
+  > .case.case_standard > .study > .inner > .image
+    background-image url('../img/case/standard_chart.png')
+    //width 998px
+    height 766px
+
+
+  > .case.case_ebola > .top
+    background-image url('../img/case/ebola_hero.png')
+  > .case.case_ebola > .observation > .image
+    background-image url('../img/case/ebola_grid.png')
+    height 366px
+  > .case.case_ebola > .study > .inner > .image
+    background-image url('../img/case/ebola_map.png')
+    //width 1011px
+    height 1015px
+
+  extra = 130
+
+  > .case
+    &.off
+      display none
+    &.on
+      display block
+    > .top
+      height 730px
+      background-color c_mono0
+      background-size cover
+      background-position center
+
+    > .nav
+      user-select none
+      background-color rgba(c_mono0, 0.8)
+      color c_white
+      padding 20px 0 0 0
+      margin -200px auto 0 auto
+      &.navbottom
+        background-color c_mono1
+        margin 0 auto 60px auto
+        > .inner
+          > .middle
+            text-align center
+      > .inner
+        max-width 1440px
+        margin auto
+        position relative
+        > .arrow
+          width 90px
+          cursor pointer
+          transition background-color 0.1s linear
+          &:hover > .box
+            border-left 2px solid c_blue
+            border-top 2px solid c_blue
+        > .arrow > .box
+          width 70px
+          height 70px
+          border-left 2px solid c_white
+          border-top 2px solid c_white
+        > .arrow.left
+          float left
+          margin 0 0 0 unit(extra, px)
+          > .box
+            transform rotate(-45deg)
+            margin 40px 0 0 10px
+        > .arrow.right
+          float right
+          margin 0 unit(extra, px) 0 0
+          > .box
+            transform rotate(135deg)
+            margin 40px 0 0 0
+        > .middle
+          margin 0 unit(90 + extra, px)
+          height 180px
+          > .label
+            font-size aitw(20)
+            f-proxc-bold()
+            padding 20px 0 10px 0px
+            animation inleft 0.2s 0s ease-in-out both
+          > .titleA, > .titleB, > .titleC
+            font-size aitw(28)
+            padding 0 0 0 0
+          > .titleC
+            padding 5px 0 0 0
+          > .titleA, > .titleC
+            animation inleft 0.2s 0.1s ease-in-out both
+          > .titleB
+            animation inleft 0.2s 0.2s ease-in-out both
+    > .who
+      max-width 1440px
+      margin auto
+      padding 55px 0 42px 0
+      > .type
+        float left
+        background-color c_blue
+        padding 6px 20px
+        color c_white
+        animation infade 0.2s 0.1s ease-in-out both
+        margin 0 0 0 unit(90 + extra, px)
+        font-size aitw(11)
+        f-prox-regular()
+      > .title
+        margin 3px unit(90 + extra, px) 0 unit(180 + extra, px)
+        font-size aitw(18)
+        f-proxc-bold()
+
+    > .problem, > .solution
+      max-width 1440px
+      margin auto
+      padding 0 0 20px 0
+      &.solution
+        padding 41px 0 20px 0
+      > .label
+        font-size aitw(20)
+        f-proxc-bold()
+        margin 0 0 0 unit(90 + extra, px)
+      > .copy
+        font-size aitw(18)
+        line-height aitw(27)
+        f-prox-light()
+        padding 11px 0 0 0
+        margin 0 unit(90 + extra, px) 0 unit(90 + extra, px)
+    > .problem > .copy
+        animation inleft 0.2s 0.3s ease-in-out both
+    > .solution > .copy
+        animation inleft 0.2s 0.4s ease-in-out both
+
+    > .observation
+      padding 20px 0
+      max-width 1440px
+      margin auto
+      > .title
+        f-proxc-bold()
+        font-size aitw(26)
+        text-align center
+        padding 42px 0 50px 0
+        margin 0 unit(90 + extra, px)
+      > .image
+        background-color c_mono0
+        background-position center
+        background-size cover
+        margin 0 unit(90 + extra, px)
+
+    > .study
+      padding 20px 0px 60px 0
+      margin 60px auto 0 auto
+      background-color c_whiteb
+      > .inner
+        margin auto
+        max-width 1440px
+        > .title
+          f-proxc-bold()
+          font-size aitw(26)
+          padding 43px 0 0 0
+          margin 0 0 0 unit(90 + extra, px)
+          &.centered
+            text-align center
+            padding 60px 0 60px 0
+            margin 0
+        > .desc
+          font-size aitw(18)
+          line-height aitw(27)
+          padding 10px 0 60px 0
+          margin 0 unit(90 + extra, px) 0 unit(90 + extra, px)
+        > .image
+          margin auto
+          min-height 400px
+          background-color c_mono0
+          margin 0 unit(90 + extra, px)
+          background-position top
+          background-size contain
+          background-repeat no-repeat
+          background-color c_whiteb
+
+  > .bottomcontact
+    padding 60px 0 90px 0
+    > .copy
+      font-size aitw(30)
+      text-align center
+      padding 0 0 40px 0
+    > .cta
+      width 250px
+      margin auto
+
+@keyframes inleft
+  from
+    transform translate(30px, 0)
+    opacity 0
+  to
+    transform translate(0, 0)
+    opacity 1
+
+@keyframes infade
+  from
+    opacity 0
+  to
+    opacity 1
+

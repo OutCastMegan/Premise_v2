@@ -1,0 +1,71 @@
+
+[
+  {
+    "name": "electrification",
+    "titlea": "Mapping the Unmapped:",
+    "titleb": "Helping investors bring electricity to the first mile in sub-Saharan Africa",
+    "type": "Map",
+    "who": "Fortune 100 company; global energy companies, investors and development banks",
+    "problem": "For global energy investors and development banks looking to improve or monitor the impact of existing electrification, or bring electricity to the first mile, existing data is insufficient to inform their decisions.",
+    "solution": "To get a read on electrification, a Fortune 100 company turned to Premise to map which homes are on and off the grid, documenting the size and roof types of the unelectrified houses, the presence of generators, and other key variables to make smarter investment decisions.  <br /><br /> Premise also mapped transformer locations and collected other critical qualitative data about their status, which development banks used to more efficiently allocate funds to neighborhoods in need.",
+    "study": {
+      "title": "ELECTRIFICATION MAPPING",
+      "description": "Premise is mapping electrification infrastructure in a regional town in sub-Saharan East Africa, capturing which homes and businesses are electrified, and then layering contextualization and proprietary analytics for strategic investment targeting."
+    }
+  },
+  {
+    "name": "bloomberg",
+    "titlea": "Pioneering a Set of Alternative Economic Indicators in Global Markets",
+    "titleb": "",
+    "type": "Index",
+    "who": "Bloomberg, LLP. Global banks, hedge funds, sovereign wealth and private equity funds, monetary policy leaders.",
+    "problem": "Getting an early, accurate read on inflation is difficult given current data-gathering mechanisms, which are slow and laborious to report.",
+    "solution": "The U.N. Food and Agriculture Organization <span class=\"blue\">determined</span> that Premise’s Food Staples Index in Brazil can predict food trends 25 days in advance of Brazil’s official monthly releases. Premise publishes its Argentina, Brazil, China, India, and U.S. food staples indexes via the Bloomberg terminal, giving traders, forecaster, analysts and government officials an unprecedented advantage to nowcast expected market behaviors up to several weeks early.",
+    "study": {
+      "title": "CONSUMER FOOD PRICES",
+      "description": "Daily price change (%) since January 2014"
+    }
+
+  },
+  {
+    "name": "cpg",
+    "titlea": "Piercing the Grey Market Veil:",
+    "titleb": "Consumer product placement in global markets",
+    "type": "Verify",
+    "who": "Leading CPG/FMCG Company",
+    "problem": "CPG companies operating in markets all over the world lack clear metrics and data into how and where their products are being distributed and traded in countries like Vietnam and Zimbabwe.",
+    "solution": "Premise verified product availability, SKU pricing and shelf volumes, enabling the company to navigate the market with unprecedented granularity and optimize their local brand strategies.",
+    "study": {
+      "title": "SHARE OF SHELF",
+      "description": ""
+    }
+  },
+  {
+    "name": "standard",
+    "titlea": "Bringing Economic Transparency to Developing Markets:",
+    "titleb": "Tracking the cost of feeding 200 million people in Nigeria and Ghana",
+    "type": "Index",
+    "who": "Standard Chartered (Nigeria, Ghana)",
+    "problem": "There’s been a paucity of independent gauges on growth or economic activity in top markets in sub-Saharan Africa, which limits foreign investment activity in these important global economies",
+    "solution": "Standard Chartered partnered with Premise to create two food price indicators in Nigeria and Ghana. Powered by Premise data, these indicators give Standard Chartered and their customers a high resolution, real-time read on food prices at the shelf level, helping them better manage substantial risk, investment and trading opportunities.",
+    "study": {
+      "title": "CONSUMER GRAINS PRICES",
+      "description": "Price level in major urban markets: Kano, Nigeria, and Accra, Ghana (base = 100)"
+    }
+
+  },
+  {
+    "name": "ebola",
+    "titlea": "Maximizing Humanitarian Response:",
+    "titleb": "Abating the spread of ebola by tracking sanitary infrastructure",
+    "type": "Map",
+    "who": "Vulcan",
+    "problem": "Humanitarian agencies frequently lack real-time visibility into risk conditions in crisis zones, particularly when coordinating between multiple agencies.",
+    "solution": "Premise partnered with Vulcan, Paul Allen’s company, to deploy thousands of mobile phones pre-loaded with Premise software to aid workers on the Ebola frontlines in Liberia, Sierra Leone, Mali and Guinea. <br /><br /> Field workers capture observations about food and sterile supplies, quarantine status, sanitary conditions and crisis- related signage. Premise analyzes the data, sending it back in real-time to organizations including the U.N. Mission for Ebola Emergency Response and other global aid agencies so they can maximize their coordinated response efforts.",
+    "study": {
+      "title": "TRACKING SANITATION INFRASTRUCTURE",
+      "description": "Prealence of handwashing stations, hospitals and health signage across Monrovia, Liberia's capital"
+    }
+  }
+]
+

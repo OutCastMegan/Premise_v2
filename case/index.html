@@ -1,0 +1,744 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Premise Data</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+    <meta name="description" content="Premise provides real-time data and on the ground intelligence powered by our global network of contributors.">
+    <meta name="theme-color" content="#FF0000">
+    <meta property="og:url" content="http://premise.oclabs.net/">
+    <meta property="og:title" content="Premise Data">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://premise.oclabs.net/img/share.png">
+    <meta property="og:description" content="Premise provides real-time data and on the ground intelligence powered by our global network of contributors.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Premise Data">
+    <meta name="twitter:description" content="Premise provides real-time data and on the ground intelligence powered by our global network of contributors.">
+    <meta name="twitter:image" content="http://premise.oclabs.net/img/share.png">
+    <!-- icons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="../ico/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../ico/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../ico/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../ico/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../ico/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="../ico/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="../ico/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="../ico/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../ico/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../ico/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../ico/mstile-144x144.png">
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="all">
+    <!--script(src="http://use.typekit.net/dul0svi.js")-->
+    <!--script.-->
+    <!--  try{Typekit.load();}catch(e){}-->
+    <link rel="stylesheet" href="../css/fonts.css" type="text/css" media="all">
+    <script type="text/javascript" src="../jst/loader.js"></script>
+    <!-- aws-->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.8.min.js"></script>
+    <script>
+      Loader.root = '../';
+      
+    </script>
+  </head>
+  <body id="caseStudy">
+    <div class="container">
+      <div class="header">
+        <div class="inner">
+          <div class="hfade off"></div><a href="../index.html#home" class="logo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="176.9px" height="36.4px" viewBox="11.5 81.9 176.9 36.4" enable-background="new 11.5 81.9 176.9 36.4"
+   xml:space="preserve">
+<rect x="12.8" y="83.2" fill="#FC1D00" width="33.8" height="33.8"/>
+<rect class="logorect" x="12.8" y="100.1" fill="#FFFFFF" width="16.9" height="16.9"/>
+<g>
+  <g>
+    <path fill="#FFFFFF" d="M65,103v7.5h-4.1V89.9h8.2c2.4,0,4.2,0.6,5.6,1.8c1.4,1.2,2,2.8,2,4.8c0,2-0.7,3.5-2,4.7
+      c-1.4,1.2-3.2,1.8-5.6,1.8L65,103L65,103z M65,99.8h4.1c1.1,0,2-0.3,2.6-0.9c0.6-0.6,0.9-1.4,0.9-2.4c0-1-0.3-1.8-0.9-2.5
+      c-0.6-0.6-1.5-1-2.6-1H65V99.8z"/>
+    <path fill="#FFFFFF" d="M85,102.2v8.2h-4.1V89.9h7.7c2.3,0,4.2,0.5,5.5,1.6c1.3,1.1,2,2.5,2,4.5c0,1.1-0.3,2-0.8,2.7
+      c-0.6,0.8-1.4,1.4-2.4,1.8c1.2,0.4,2.1,0.9,2.6,1.8c0.5,0.8,0.8,1.9,0.8,3.1v1.5c0,0.6,0.1,1.2,0.2,1.8c0.1,0.6,0.4,1.1,0.8,1.4
+      v0.3H93c-0.4-0.3-0.6-0.8-0.7-1.5c-0.1-0.7-0.2-1.4-0.2-2v-1.5c0-1-0.3-1.8-0.8-2.4c-0.6-0.6-1.3-0.8-2.4-0.8H85L85,102.2z M85,99
+      h3.6c1.2,0,2-0.2,2.6-0.7c0.6-0.5,0.8-1.2,0.8-2.2c0-0.9-0.3-1.7-0.8-2.2c-0.6-0.6-1.4-0.8-2.5-0.8H85V99z"/>
+    <path fill="#FFFFFF" d="M113.7,101.4h-8.5v5.8h10v3.2h-14.1V89.9h14V93h-9.9v5.2h8.5V101.4z"/>
+    <path fill="#FFFFFF" d="M124.2,89.9l5.2,15.1h0.1l5.3-15.1h5.4v20.5h-4.1v-6.1l0.4-9.1l-0.1,0l-5.5,15.2h-2.8l-5.5-15.1l-0.1,0
+      l0.4,9v6.1h-4.1V89.9H124.2z"/>
+    <path fill="#FFFFFF" d="M149.6,110.4h-4.1V89.9h4.1V110.4z"/>
+    <path fill="#FFFFFF" d="M165.9,105c0-0.8-0.3-1.4-0.8-1.9c-0.6-0.5-1.5-0.9-2.9-1.4c-2.5-0.7-4.3-1.5-5.5-2.5
+      c-1.3-1-1.9-2.3-1.9-4c0-1.7,0.7-3.1,2.2-4.1s3.3-1.6,5.5-1.6c2.3,0,4.1,0.6,5.5,1.8c1.4,1.2,2.1,2.7,2.1,4.4l0,0.1h-4
+      c0-0.9-0.3-1.7-0.9-2.3c-0.6-0.6-1.5-0.9-2.7-0.9c-1.1,0-1.9,0.2-2.5,0.7c-0.6,0.5-0.9,1.1-0.9,1.9c0,0.7,0.3,1.3,1,1.7
+      c0.6,0.4,1.7,0.9,3.3,1.4c2.3,0.6,4,1.5,5.1,2.5c1.2,1,1.7,2.4,1.7,4.1c0,1.8-0.7,3.2-2.1,4.2c-1.4,1-3.2,1.5-5.5,1.5
+      c-2.2,0-4.2-0.6-5.8-1.7c-1.7-1.1-2.5-2.8-2.4-4.8l0-0.1h4c0,1.2,0.4,2.1,1.1,2.7c0.8,0.6,1.8,0.8,3.1,0.8c1.1,0,2-0.2,2.6-0.7
+      C165.6,106.4,165.9,105.8,165.9,105z"/>
+    <path fill="#FFFFFF" d="M186.9,101.4h-8.5v5.8h10v3.2h-14.1V89.9h14V93h-9.9v5.2h8.5V101.4L186.9,101.4z"/>
+  </g>
+</g>
+<path d="M11.5,81.9v36.4h36.4V81.9H11.5z M46.6,117.1H12.8V83.2h33.8V117.1z"/>
+</svg>
+</a>
+          <div class="hamburger off">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+          <div class="menu">
+            <a href="../whatwedo/index.html" class="item">
+              <div class="copy">What We Do</div>
+            </a>
+            <a href="../ourteam/index.html" class="item">
+            <div class="copy">Our Team</div>
+            </a>
+            <a href="../thenetwork/index.html" class="item">
+              <div class="copy">The Network</div>
+            </a>
+          </div>
+          <div class="clear"></div>
+          <div class="mobilemenu off">
+            <div class="inner">
+              <div class="page page1 on">
+                <!--a.item(href="#{rootdir}" + (c.index ? 'index.html': '') + "#tech").copy Our Technology
+                -->
+                <!--a.item(href="#{rootdir}" + (c.index ? 'index.html' : '') + "#cap").copy Our Capabilities
+                -->
+                <!--a.item(href="#{rootdir}#grid").copy Our Stories
+                --><a href="../whatwedo/index.html" class="item">
+                  <div class="copy">What We Do</div></a>
+                  <a href="../thenetwork/index.html" class="item">
+                  <div class="copy">The Network</div></a>            
+                <a href="../ourteam/index.html" class="item">
+                  <div class="copy">Our Team</div></a>
+                  <a href="../contact/index.html" class="item">
+                  <div class="copy">Contact</div></a>
+              </div>
+              <div class="page page2 off">
+                <div class="aboutitem item">
+                  <div class="carrot left"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 19 10.7" enable-background="new 0 0 19 10.7" xml:space="preserve">
+<path stroke-miterlimit="10" d="M15.8,2.6c0.1-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2-0.1-0.3
+  c-0.2-0.2-0.4-0.2-0.6,0L9.5,7.8L3.7,2.1c-0.2-0.2-0.4-0.2-0.6,0C3,2.2,3,2.5,3.2,2.6l6,6c0.2,0.2,0.4,0.2,0.6,0L15.8,2.6z"/>
+</svg>
+
+                  </div>
+                  <div class="copy"></div>
+                </div><a href="../about/index.html" class="item">
+                  <div class="copy">Leadership</div></a><a href="../press/index.html" class="item">
+                  <div class="copy">Press</div></a><a href="https://medium.com/@premisedata" target="_blank" class="item">
+                  <div class="copy">Blog</div></a><a href="../careers/index.html" class="item">
+                  <div class="copy">Careers</div></a>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fade off"></div>
+      <div class="cases">
+        <div class="loading on">
+          <div class="clear"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="case case_electrification off">
+          <div class="clear"></div>
+          <div class="top">
+            <div class="heroOverlay">
+              <div class="inner">
+                <div class="headline">Helping Investors Bring Electricity to<br>the First Mile in Sub-Saharan Africa</div>
+                <div class="type valign">Map</div>
+                <img class="pointerIcon valign" src="../img/thenetwork/location.svg">
+                <span class="location valign">East Africa</span>
+              </div>
+            </div>
+          </div>
+            
+          
+          <div class="customerWrapper outerShadowBottom">
+            <div class="inner">
+              <div class="customer blue">Fortune 100 company</div>
+              <div class="customer blue">Global energy companies</div>
+              <div class="customer blue">Investors and development banks</div>
+            </div>
+          </div>
+          <div class="problem">
+            <div class="label">PROBLEM:</div>
+            <div class="copy">For global energy investors and development banks looking to improve or monitor the impact of existing electrification, or bring electricity to the first mile, existing data is insufficient to inform their decisions.</div>
+          </div>
+          <div class="solution">
+            <div class="label">SOLUTION:</div>
+            <div class="copy">To get a read on electrification, a Fortune 100 company turned to Premise to map which homes are on and off the grid, documenting the size and roof types of the unelectrified houses, the presence of generators, and other key variables to make smarter investment decisions. <br /><br /> Premise also mapped transformer locations and collected other critical qualitative data about their status, which development banks used to more efficiently allocate funds to neighborhoods in need. </div>
+          </div>
+          <div class="study outerShadowTop">
+            <div class="inner">
+              <div class="title">Electrification.</div>
+              <div class="desc">Premise is mapping electrification infrastructure in a regional town in sub-Saharan East Africa, capturing which homes and businesses are electrified, and then layering contextualization and proprietary analytics for strategic investment targeting.</div>
+            </div>
+          </div>
+          <div class="observation">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid1.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid2.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid3.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid4.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid5.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid6.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid7.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid8.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid9.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid10.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid11.jpg">
+            <img class="caseGridImage" src="../img/casestudies/electrification/grid12.jpg">
+          </div>
+          <div class="study">
+            <div class="inner">
+              <img class="image desktop" src="../img/casestudies/electrification/electrification-chart.png" />
+              <img class="image mobile" src="../img/casestudies/electrification/electrification-chart_mobile.png" />
+            </div>
+          </div>
+        </div>
+        <div class="case case_bloomberg off">
+          <div class="clear"></div>
+          <div class="top">
+            <div class="heroOverlay">
+              <div class="inner">
+                <div class="headline">Pioneering a Set of Alternative Economic<br>Indicators in Global Markets</div>
+                <div class="type valign">Index</div>
+                <img class="pointerIcon valign" src="../img/thenetwork/location.svg">
+                <span class="location valign">Brazil</span>
+              </div>
+            </div>
+          </div>
+            
+          
+          <div class="customerWrapper outerShadowBottom">
+            <div class="inner">
+              <div class="customer blue">Bloomberg, LLP.</div>
+              <div class="customer blue">Global banks</div>
+              <div class="customer blue">Hedge funds</div>
+              <div class="customer blue">Sovereign wealth and private equity funds</div>
+              <div class="customer blue">Monetary policy leaders</div>
+            </div>
+          </div>
+          <div class="problem">
+            <div class="label">PROBLEM:</div>
+            <div class="copy">Getting an early, accurate read on inflation is really difficult given current data-gathering mechanisms, which are slow and laborious to report.</div>
+          </div>
+          <div class="solution">
+            <div class="label">SOLUTION:</div>
+            <div class="copy">The U.N. Food and Agriculture Organization determined that Premise’s Food Staples Index in Brazil can predict food trends 25 days in advance of Brazil’s official monthly releases.<br /><br />Premise publishes its Argentina, Brazil, China, India and U.S. food staples indexes via the Bloomberg terminal, giving traders, forecaster, analysts and government officials an unprecedented advantage to nowcast expected market behaviors up to several weeks early.</div>
+          </div>
+          <div class="study outerShadowTop">
+            <div class="inner">
+              <div class="title">Consumer Staples Price Index.</div>
+              <div class="desc">Daily price change (%) since January 2014<br><span>Source: Premise Data / Bloomberg</span></div>
+              <img class="image desktop" src="../img/casestudies/bloomberg/consumerstaples-chart.svg" />
+              <img class="image mobile" src="../img/casestudies/bloomberg/consumerstaples-chart_mobile.svg" />
+            </div>
+          </div>
+          <div class="observation">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid1.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid2.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid3.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid4.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid5.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid6.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid7.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid8.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid9.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid10.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid11.jpg">
+            <img class="caseGridImage" src="../img/casestudies/bloomberg/grid12.jpg">
+          </div>
+          
+          
+        </div>
+        <div class="case case_cpg off">
+          <div class="clear"></div>
+          <div class="top">
+            <div class="heroOverlay">
+              <div class="inner">
+                <div class="headline">Piercing the Grey Market Veil:<br>Consumer Product Placement in Global Markets</div>
+                <div class="type valign">Verify</div>
+                <img class="pointerIcon valign" src="../img/thenetwork/location.svg">
+                <span class="location valign">Vietnam</span>
+              </div>
+            </div>
+          </div>
+            
+          
+          <div class="customerWrapper outerShadowBottom">
+            <div class="inner">
+              <div class="customer blue">Leading CPG/FMCG company</div>
+            </div>
+          </div>
+          <div class="problem">
+            <div class="label">PROBLEM:</div>
+            <div class="copy">CPG companies operating in markets all over the world lack clear metrics and data into how and where their products are being distributed and traded in countries like Vietnam and Zimbabwe.</div>
+          </div>
+          <div class="solution">
+            <div class="label">SOLUTION:</div>
+            <div class="copy">Premise verified product availability, SKU pricing and shelf volumes, enabling the company to navigate the market with unprecedented granularity and optimize their local brand strategies.</div>
+          </div>
+          <div class="study outerShadowTop">
+            <div class="inner">
+              <div class="title">Product Placement Verification.</div>
+              <img class="image desktop" src="../img/casestudies/cpg/shareofshelf-chart.png" />
+              <img class="image mobile" src="../img/casestudies/cpg/shareofshelf-chart_mobile.png" />
+            </div>
+          </div>
+          <div class="observation">
+            <img class="shelfImage" src="../img/casestudies/cpg/shelf.jpg" />
+          </div>
+        </div>
+        <div class="case case_standard off">
+          <div class="clear"></div>
+          <div class="top">
+            <div class="heroOverlay">
+              <div class="inner">
+                <div class="headline">Tracking the cost of feeding 200 million people in Nigeria and Ghana </div>
+                <div class="type valign">Index</div>
+                <img class="pointerIcon valign" src="../img/thenetwork/location.svg">
+                <span class="location valign">Ghana, Nigeria</span>
+              </div>
+            </div>
+          </div>
+            
+          
+          <div class="customerWrapper outerShadowBottom">
+            <div class="inner">
+              <div class="customer blue">Standard Chartered (Nigeria, Ghana)</div>
+            </div>
+          </div>
+          <div class="problem">
+            <div class="label">PROBLEM:</div>
+            <div class="copy">There’s been a paucity of independent gauges on growth or economic activity in top markets in sub-Saharan Africa, which limits foreign investment activity in these important global economies.</div>
+          </div>
+          <div class="solution">
+            <div class="label">SOLUTION:</div>
+            <div class="copy">Standard Chartered partnered with Premise to create two food price indicators in Nigeria and Ghana. Powered by Premise data, these indicators give Standard Chartered and their customers a high resolution, real-time read on food prices at the shelf level, helping them better manage substantial risk, investment and trading opportunities.</div>
+          </div>
+          <div class="study outerShadowTop">
+            <div class="inner">
+              <div class="title">Consumer Grain Prices.</div>
+              <div class="desc">Price level in major urban markets: Kano, Nigeria,<br>and Accra, Ghana (base = 100)<br><span>Source: Premise Data 2014-2015</span></div>
+              <img class="image desktop" src="../img/casestudies/standard/consumergrain-chart.svg" />
+              <img class="image mobile" src="../img/casestudies/standard/consumergrain-chart_mobile.svg" />
+            </div>
+          </div>
+          <div class="observation">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid1.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid2.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid3.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid4.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid5.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid6.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid7.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid8.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid9.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid10.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid11.jpg">
+            <img class="caseGridImage" src="../img/casestudies/standard/grid12.jpg">
+          </div>
+          
+        </div>
+        <div class="case case_ebola off">
+          <div class="clear"></div>
+          <div class="top"></div>
+          <div class="nav">
+            <div class="inner">
+              <div class="arrow left">
+                <div class="box"></div>
+              </div>
+              <div class="arrow right">
+                <div class="box"></div>
+              </div>
+              <div class="middle">
+                <div class="label label_4">CASE STUDY</div>
+                <div class="titleA">Maximizing Humanitarian Response:</div>
+                <div class="titleB">Abating the spread of ebola by tracking sanitary infrastructure</div>
+              </div>
+            </div>
+          </div>
+          <div class="who">
+            <div class="type">Map</div>
+            <div class="title">WHO: Vulcan</div>
+            <div class="clear"></div>
+          </div>
+          <div class="problem">
+            <div class="label">PROBLEM:</div>
+            <div class="copy">Humanitarian agencies frequently lack real-time visibility into risk conditions in crisis zones, particularly when coordinating between multiple agencies.</div>
+          </div>
+          <div class="solution">
+            <div class="label">SOLUTION:</div>
+            <div class="copy">Premise partnered with Vulcan, Paul Allen’s company, to deploy thousands of mobile phones pre-loaded with Premise software to aid workers on the Ebola frontlines in Liberia, Sierra Leone, Mali and Guinea. <br /><br /> Field workers capture observations about food and sterile supplies, quarantine status, sanitary conditions and crisis- related signage. Premise analyzes the data, sending it back in real-time to organizations including the U.N. Mission for Ebola Emergency Response and other global aid agencies so they can maximize their coordinated response efforts.</div>
+          </div>
+          <div class="observation">
+            <div class="title">ON THE GROUND OBSERVATIONS</div>
+            <div class="image"></div>
+          </div>
+          <div class="study">
+            <div class="inner">
+              <div class="title">TRACKING SANITATION INFRASTRUCTURE</div>
+              <div class="desc">Prealence of handwashing stations, hospitals and health signage across Monrovia, Liberia's capital</div>
+              <div class="image"></div>
+            </div>
+          </div>
+         
+        </div>
+
+
+
+
+      <div name="grid" class="grid section section_grid innerShadowTopBottom">
+        <div class="inner">
+          <div class="copyblock">
+            <div class="copy copybold blue desktop">Explore More Stories.</div>
+            <div class="copy copybold blue mobile">Explore More</div>
+          </div>
+          <a href="http://blog.premise.com/data/science/2014/08/06/holiday-feasts-in-nigeria/" title="Tracking the price divergence for meats and sweets in Kano and Lagos during Ramadan" class="cell">
+            <img class="storyImage" src="../img/storiesgrid/storiesgrid_1.jpg" />
+            <div class="storyHover">
+              <div class="cinner">
+                <div class="copy">Tracking the price divergence for meats and sweets in Kano and Lagos during Ramadan</div>
+              </div>
+            </div>
+            <div class="storyInfo">
+              <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+              <span class="storyLocation">Nigeria</span>
+              <div class="storyCTA blogPost">READ BLOG POST</div>
+            </div>
+          </a>
+          <a href="index.html#3" title="Piercing the Grey Market Veil" class="cell">
+            <img class="storyImage" src="../img/storiesgrid/storiesgrid_2.jpg" />
+            <div class="storyHover">
+              <div class="cinner">
+                <div class="copy">Piercing the Grey Market Veil</div>
+              </div>
+            </div>
+            <div class="storyInfo">
+              <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+              <span class="storyLocation">Vietnam</span>
+              <div class="storyCTA caseStudy">READ CASE STUDY</div>
+            </div>
+          </a>
+          <a href="http://blog.premise.com/data/science/2014/09/15/politics-storage-and-food-prices-in-india/" title="Discerning the economic effects of drought, new policies and poor cold storage infrastructure in India." class="cell">
+            <img class="storyImage" src="../img/storiesgrid/storiesgrid_3.jpg" />
+            <div class="storyHover">
+              <div class="cinner">
+                <div class="copy">Discerning the economic effects of drought, new policies and poor cold storage infrastructure in India.</div>
+              </div>
+            </div>
+            <div class="storyInfo">
+              <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+              <span class="storyLocation">India</span>
+              <div class="storyCTA blogPost">READ BLOG POST</div>
+            </div>
+          </a>
+          <a href="index.html#2" title="Pioneering a set of alternative economic indicators in global markets" class="cell">
+            <img class="storyImage" src="../img/storiesgrid/storiesgrid_4.jpg" />
+            <div class="storyHover">
+              <div class="cinner">
+                <div class="copy">Pioneering a set of alternative economic indicators in global markets</div>
+              </div>
+            </div>
+            <div class="storyInfo">
+              <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+              <span class="storyLocation">Brazil</span>
+              <div class="storyCTA caseStudy">READ CASE STUDY</div>
+            </div>
+          </a>
+          <a href="index.html#1" title="Helping investors bring electricity to the first mile in Sub-Saharan Africa" class="cell">
+            <img class="storyImage" src="../img/storiesgrid/storiesgrid_5.jpg" />
+            <div class="storyHover">
+              <div class="cinner">
+                <div class="copy">Helping investors bring electricity to the first mile in Sub-Saharan Africa</div>
+              </div>
+            </div>
+            <div class="storyInfo">
+              <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+              <span class="storyLocation">East Africa</span>
+              <div class="storyCTA caseStudy">READ CASE STUDY</div>
+            </div>
+          </a>
+          <a href="http://blog.premise.com/data/science/2014/09/26/introducing-premise-coca-cola-index/" title="Found on nearly every every market shelf globally, Coca-Cola is bellwether for a country's economic health" class="cell">
+            <img class="storyImage" src="../img/storiesgrid/storiesgrid_6.jpg" />
+            <div class="storyHover">
+              <div class="cinner">
+                <div class="copy">Found on nearly every every market shelf globally, Coca-Cola is bellwether for a country's economic health</div>
+              </div>
+            </div>
+            <div class="storyInfo">
+              <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+              <span class="storyLocation">China</span>
+              <div class="storyCTA blogPost">READ BLOG POST</div>
+            </div>
+          </a>
+          <a href="index.html#4" title="Tracking the cost of feeding 200 million people" class="cell">
+            <img class="storyImage" src="../img/storiesgrid/storiesgrid_7.jpg" />
+            <div class="storyHover">
+              <div class="cinner">
+                <div class="copy">Tracking the cost of feeding 200 million people</div>
+              </div>
+            </div>
+            <div class="storyInfo">
+              <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+              <span class="storyLocation">Nigeria, Ghana</span>
+              <div class="storyCTA caseStudy">READ CASE STUDY</div>
+            </div>
+          </a>
+          <a href=" http://blog.premise.com/data/science/2014/11/10/liberia-update/" title="Determining Ebola’s impact on food prices in markets across Monrovia, Liberia" class="cell">
+            <img class="storyImage" src="../img/storiesgrid/storiesgrid_8.jpg" />
+            <div class="storyHover">
+              <div class="cinner">
+                <div class="copy">Determining Ebola’s impact on food prices in markets across Monrovia, Liberia</div>
+              </div>
+            </div>
+            <div class="storyInfo">
+              <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+              <span class="storyLocation">Liberia</span>
+              <div class="storyCTA blogPost">READ BLOG POST</div>
+            </div>
+          </a>
+          <a href="http://blog.premise.com/data/science/2014/12/22/UN-FAO/" title="FAO determines Premise’s data in Brazil can predict food trends 25 days in advance" class="cell hiddenCell">
+            <img class="storyImage" src="../img/storiesgrid/storiesgrid_9.jpg" />
+            <div class="storyHover">
+              <div class="cinner">
+                <div class="copy">FAO determines Premise’s data in Brazil can predict food trends 25 days in advance</div>
+              </div>
+            </div>
+            <div class="storyInfo">
+              <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+              <span class="storyLocation">Brazil</span>
+              <div class="storyCTA blogPost">READ BLOG POST</div>
+            </div>
+          </a>
+          <a href="http://blog.premise.com/data/science/2014/10/02/posters/" title="Documenting the concentration of political posters in 8 cities during the 2014 Brazilian elections" class="cell hiddenCell">
+            <img class="storyImage" src="../img/storiesgrid/storiesgrid_10.jpg" />
+            <div class="storyHover">
+              <div class="cinner">
+                <div class="copy">Documenting the concentration of political posters in 8 cities during the 2014 Brazilian elections</div>
+              </div>
+            </div>
+            <div class="storyInfo">
+              <img class="mapPointerIcon" src="../img/whatwedo/location.svg" />
+              <span class="storyLocation">Brazil</span>
+              <div class="storyCTA blogPost">READ BLOG POST</div>
+            </div>
+          </a>
+          <div class="clear"></div>
+          <div id="showMore">SHOW MORE STORIES</div>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+
+        <div class="bottomcontact">
+          <div class="copy">Map your world.<br>Get started with Premise.</div><a href="../contact/index.html" class="cta contact">
+            <div class="copy">CONTACT US</div></a>
+        </div>
+      </div>
+
+
+      <div class="footer">
+        <div class="inner">
+          <div class="sitemaps">
+              <div class="sitemap">
+                <a href="https://medium.com/@premisedata" target="_blank" class="item">Blog</a>
+              </div>
+              <div class="sitemap">
+                <a href="../press/index.html" class="item">Press</a>
+              </div>
+              <div class="sitemap">
+                <a href="../faq/index.html" class="item">FAQ</a>
+              </div>
+              <div class="sitemap">
+                <a href="../contact/index.html" class="item">Contact Us</a>
+              </div>
+          </div>
+          <div class="left">
+            <div class="icons"><a href="mailto:info@premise.com" class="icon first icon_mail"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="51px" height="51px" viewBox="0 0 51 51" enable-background="new 0 0 51 51" xml:space="preserve">
+<g>
+  <path fill="#FFFFFF" d="M12.1,15.1v20.8h26.9V15.1H12.1z M13.4,19.5l7.8,5.8l-7.8,5.8V19.5z M13.4,32.8l8.9-6.7l3.2,2.4l3.2-2.4
+    l8.9,6.7v1.5H13.4V32.8z M37.7,31.1l-7.8-5.8l7.8-5.8V31.1z M37.7,17.8l-12.2,9.1l-12.2-9.1v-1h24.3V17.8z"/>
+  <rect x="1" y="1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="49" height="49"/>
+</g>
+</svg>
+</a><a href="https://twitter.com/premisedata" target="_blank" class="icon icon_twitter"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="51px" height="51px" viewBox="0 0 51 51" enable-background="new 0 0 51 51" xml:space="preserve">
+<rect x="1" y="1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="49" height="49"/>
+<g>
+  <path fill="#FFFFFF" d="M36.5,16.4c-0.9,0.5-1.9,0.9-3,1.2c-0.9-0.9-2.1-1.5-3.5-1.5c-2.6,0-4.8,2.1-4.8,4.8c0,0.4,0,0.7,0.1,1.1
+    c-4-0.2-7.5-2.1-9.8-5c-0.4,0.7-0.6,1.5-0.6,2.4c0,1.7,0.8,3.1,2.1,4c-0.8,0-1.5-0.2-2.2-0.6c0,0,0,0,0,0.1c0,2.3,1.6,4.2,3.8,4.7
+    c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,1.9,2.4,3.3,4.4,3.3c-1.6,1.3-3.7,2-5.9,2c-0.4,0-0.8,0-1.1-0.1
+    c2.1,1.4,4.6,2.1,7.3,2.1c8.8,0,13.6-7.3,13.6-13.6c0-0.2,0-0.4,0-0.6c0.9-0.7,1.7-1.5,2.4-2.5c-0.9,0.4-1.8,0.6-2.7,0.7
+    C35.4,18.5,36.1,17.5,36.5,16.4z"/>
+</g>
+</svg>
+</a><a href="https://www.linkedin.com/company/premise-data-corporation" target="_blank" class="icon icon_li"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="51px" height="51px" viewBox="0 0 51 51" enable-background="new 0 0 51 51" xml:space="preserve">
+<rect x="1" y="1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="49" height="49"/>
+<g>
+  <rect class="rectfill" x="14.3" y="21.6" fill="#FFFFFF" width="4.8" height="15.5"/>
+  <circle fill="#FFFFFF" cx="16.7" cy="16.7" r="2.8"/>
+  <path fill="#FFFFFF" d="M37.1,28.6c0-4.2-0.9-7.4-5.8-7.4c-2.3,0-3.9,1.3-4.6,2.5h-0.1v-2.1h-4.6v15.5h4.8v-7.7c0-2,0.4-4,2.9-4
+    c2.5,0,2.5,2.3,2.5,4.1v7.5h4.8V28.6z"/>
+</g>
+</svg>
+</a><a href="https://www.facebook.com/premisedata" target="_blank" class="icon icon_fb"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="51px" height="51px" viewBox="0 0 51 51" enable-background="new 0 0 51 51" xml:space="preserve">
+<rect x="1" y="1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="49" height="49"/>
+<g>
+  <path fill="#FFFFFF" d="M22.4,37.1h4.8c0,0,0-6.4,0-11.6h3.3l0.4-4.1h-3.7V19c0-0.9,0.6-1.1,1-1.1s2.6,0,2.6,0v-4l-3.6,0
+    c-4,0-4.9,3-4.9,4.9v2.7h-2.3v4.1h2.3C22.4,30.8,22.4,37.1,22.4,37.1z"/>
+</g>
+</svg>
+</a><a href="http://instagram.com/premisedata" target="_blank" class="icon last icon_insta"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="51px" height="51px" viewBox="0 0 51 51" enable-background="new 0 0 51 51" xml:space="preserve">
+<rect x="1" y="1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="49" height="49"/>
+<g>
+  <path fill="#FFFFFF" d="M32.6,13.9H18.4c-2.5,0-4.5,2-4.5,4.5v4.7v9.5c0,2.5,2,4.5,4.5,4.5h14.2c2.5,0,4.5-2,4.5-4.5v-9.5v-4.7
+    C37.1,15.9,35.1,13.9,32.6,13.9z M33.9,16.6l0.5,0v0.5v3.4l-3.9,0l0-3.9L33.9,16.6z M22.2,23.1c0.7-1,1.9-1.7,3.3-1.7
+    c1.4,0,2.6,0.7,3.3,1.7c0.5,0.7,0.8,1.5,0.8,2.4c0,2.3-1.8,4.1-4.1,4.1c-2.3,0-4.1-1.8-4.1-4.1C21.4,24.6,21.7,23.8,22.2,23.1z
+     M34.9,32.6c0,1.2-1,2.2-2.2,2.2H18.4c-1.2,0-2.2-1-2.2-2.2v-9.5h3.5c-0.3,0.7-0.5,1.5-0.5,2.4c0,3.5,2.8,6.3,6.3,6.3
+    c3.5,0,6.3-2.8,6.3-6.3c0-0.8-0.2-1.6-0.5-2.4h3.5V32.6z"/>
+</g>
+</svg>
+</a>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="right">
+            
+            <div class="signup">
+              <div class="title">Subscribe to our newsletter</div>
+              <form class="signupform">
+                <input type="text" name="email" placeholder="Email Address" class="email">
+                <input type="submit" value="Sign Up" class="submit">
+                <div class="clear"></div>
+              </form>
+            </div>
+            
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+
+      
+
+
+      
+    <script type="text/javascript">
+      function loadercomplete() {
+        Loader.load('../jst/case.js', 'Case');
+        Global.i()
+      }
+    </script>
+    <div class="status success off">
+      <div class="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.001 16.002" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 16.001 16.002">
+<path d="m8,0c-4.418,0-8,3.584-8,8 0,4.42 3.582,8.002 8,8.002 4.42,0 8.001-3.582 8.001-8.002 0-4.416-3.581-8-8.001-8zm4.99,10.677l-2.315,2.313-2.674-2.676-2.675,2.676-2.314-2.313 2.676-2.678-2.676-2.674 2.314-2.313 2.675,2.674 2.674-2.674 2.315,2.313-2.676,2.674 2.676,2.678z"/>
+</svg>
+
+      </div>
+      <div class="label error"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<path d="M15.82,14.529l-6.938-13C8.709,1.204,8.37,1,8.001,1H8C7.631,1,7.293,1.203,7.119,1.528l-6.969,13
+  c-0.166,0.311-0.157,0.685,0.023,0.986C0.354,15.814,0.68,16,1.031,16h13.906c0.351,0,0.677-0.184,0.858-0.486
+  C15.976,15.213,15.985,14.839,15.82,14.529z M8,14c-0.552,0-1-0.448-1-1s0.448-1,1-1c0.551,0,1,0.448,1,1S8.551,14,8,14z M9,10.016
+  c0,0.553-0.449,1-1,1c-0.552,0-1-0.447-1-1v-4c0-0.552,0.448-1,1-1c0.551,0,1,0.448,1,1V10.016z"/>
+</svg>
+
+      </div>
+      <div class="label success"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="15px" height="15px" viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+<path d="M7.5,0C3.357,0,0,3.357,0,7.5S3.357,15,7.5,15S15,11.643,15,7.5S11.643,0,7.5,0z M6.439,11.035
+  L2.904,7.5l1.414-1.414l2.121,2.121l4.242-4.242l1.414,1.414L6.439,11.035z"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+      </div>
+      <div class="copy">
+        <ul>
+          <li>status message</li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      Loader.scripts.jst_lib.push('jquery.min');
+      Loader.scripts.jst.push('status');
+      Loader.scripts.jst.push('main');
+      Loader.scripts.jst.push('global');
+      
+      Loader.i( function(result) {
+      
+        if (result) {
+      
+          if (typeof(loadercomplete) === 'function') {
+            loadercomplete();
+          }
+      
+        }
+      
+      });
+      
+      
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-42877362-8']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      
+      
+    </script>
+  </body>
+</html>

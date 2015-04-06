@@ -1,0 +1,27 @@
+extends layout
+
+block variables
+  - var section = 'index'
+  - var rootdir = './'
+
+block content
+
+  .container
+
+    include header
+
+    include hero
+
+    include tech
+    include cap
+    include grid
+    include why
+    include contact
+
+    include footer
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Loader.load('./jst/index.js', 'Index');
+      Global.i()
+    }

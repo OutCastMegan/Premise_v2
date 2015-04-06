@@ -1,0 +1,34 @@
+
+extends layout
+
+block variables
+  - var section = 'faq'
+  - var rootdir = '../'
+
+block content
+
+  .container
+
+    include header
+
+    .faq.global
+      .title FAQ
+
+      .questions
+        - var cat = ''
+        each q in faq
+          if cat != q.cat
+            .title #{q.cat}
+            - var cat = q.cat
+
+          .block
+            .question #{q.question}
+            .answer.off !{q.answer}
+
+    include footer
+
+   script(type='text/javascript').
+    function loadercomplete() {
+      Loader.load('#{rootdir}jst/start.js', 'Start');
+      Global.i()
+    }

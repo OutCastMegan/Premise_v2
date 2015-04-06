@@ -1,0 +1,78 @@
+
+.press
+
+  padding 100px 0 100px 0
+  max-width 1440px
+  margin auto
+
+  > .inner
+    margin 0 120px
+    > .title
+      f-proxc-bold()
+      font-size aitw(30)
+      text-align center
+      padding 60px 0 90px 0
+      color c_mono2
+    > .subtitle
+      f-proxc-light()
+      font-size aitw(36)
+      text-align left
+      color c_mono2
+    > .articles
+      padding 20px 0
+      > .article
+        display block
+        border-bottom 2px solid c_mono2 
+        padding 20px 0
+        white-space nowrap
+        text-decoration none
+        overflow hidden
+        text-overflow ellipsis
+        color c_mono2
+        &.on
+          display block
+        &.off
+          display none
+        &:hover
+          > .title
+            color c_blue
+        &:first-child
+          border-top 2px solid c_mono2 
+        > .date, > .source, > .title
+          display inline
+          font-size aitw(21)
+        > .date
+          padding 0 20px 0 0
+          color c_blue
+        > .date, > .source
+          f-prox-semi()
+        > .title
+          f-prox-regular()
+          color c_mono3
+          padding 0 0 0 10px
+          white-space nowrap
+          overflow hidden
+          text-overflow ellipsis
+
+    
+  > .inquiries
+    padding 60px 0 0 0
+    > .copy, > .email
+      font-size aitw(24)
+      text-align center
+    > .copy
+      letter-spacing 1px
+    > .email
+      display block
+      color c_mono3
+
+.more
+  color c_blue
+  f-prox-semi()
+  font-style italic
+  font-size aitw(22)
+  text-decoration underline
+  cursor pointer
+  margin 10px 0 0 10px
+
+

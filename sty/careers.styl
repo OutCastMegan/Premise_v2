@@ -1,0 +1,91 @@
+
+.culturehero
+  background url('../img/withus.jpg')
+  background-position center
+  height 469px
+  max-width 1440px
+  margin 0 auto 15px auto
+
+.what
+  border-top 1px solid c_monob
+  margin 20px 0 0 0
+  padding 20px 0 0 0
+
+.benefits
+  padding 42px 120px 60px 120px
+  max-width 1440px
+  margin auto
+  > .inner
+    > .benefit
+      width 33%
+      float left
+      padding 0 0 40px 0
+      > .icon
+        float left
+        width 60px
+        height 60px
+        margin 0 0 0 20px
+        > svg
+          width inherit
+          height inherit
+      > .name
+        float left
+        padding 0 0 0 20px
+        font-size aitw(20pt)
+        line-height 60px
+
+.listing
+  padding 30px 120px 100px 120px
+  max-width 1440px
+  margin auto
+  > .item
+    font-size aitw(20)
+    padding 10px 0
+
+.currentopenings
+  padding 60px 120px
+  max-width 1440px
+  margin auto
+  > .title
+    font-size aitw(36)
+
+  > .openings
+    padding 20px 0 20px 0
+
+    > #whr_embed_hook > ul.whr-items
+      padding 0
+
+    > #whr_embed_hook > ul.whr-items > li.whr-item
+      max-height 60px
+      overflow hidden
+      border-top 2px solid c_mono2
+      &:last-child
+        border-bottom 2px solid c_mono2
+
+      > h3.whr-title a
+        color c_blue
+        text-decoration none
+        f-prox-semi()
+
+      > ul.whr-info > li.whr-dept
+        float right
+        margin -41px 200px 0 0
+        list-style-type none
+        f-prox-regular()
+        color c_mono3
+
+      > ul.whr-info > li.whr-location
+        float right
+        margin -41px 0 0 0
+        list-style-type none
+        f-prox-regular()
+        font-style italic
+        color c_mono3
+
+.cta.apply
+  width 300px
+  margin auto auto 175px auto
+  text-align center
+  > .copy
+    padding 29px 40px
+

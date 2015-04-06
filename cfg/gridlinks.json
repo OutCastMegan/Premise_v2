@@ -1,0 +1,97 @@
+{
+  "grid": [
+    {
+      "type": "instagram",
+      "copy1": "Diverging price trends in Kano and Lagos, Nigeria, during Ramadan",
+      "url": "http://instagram.com/p/vebeEYK79G"
+    },
+    {
+      "type": "instagram",
+      "copy1": "The entry form to Liberia when Premise’s Nicholai Lidow recently visited",
+      "url": "http://instagram.com/p/utG-r0q78u"
+    },
+    {
+      "type": "blog",
+      "copy1": "A complex economic picture in India: the confluence of drought, new economic policies, and poor food storage infrastructure",
+      "url": "http://blog.premise.com/data/science/2014/09/15/politics-storage-and-food-prices-in-india/"
+    },
+
+    {
+      "type": "instagram",
+      "copy1": "A currency exchange in Monrovia, Liberia",
+      "url": "http://instagram.com/p/uJi4dBK79S"
+    },
+    {
+      "type": "blog",
+      "copy1": "FAO Paper: Premise food data predicts trends up to 25 days in advance",
+      "url": "http://blog.premise.com/data/science/2014/12/22/UN-FAO/"
+    },
+    {
+      "type": "instagram",
+      "copy1": "A comparison of flooding from Typhoon Hagupit in the Philippines taken four days and two blocks apart",
+      "url": "http://instagram.com/p/wczHnOq75j"
+    },
+    {
+      "type": "casestudy",
+      "copy1": "Abating the spread of Ebola by tracking sanitary infrastructure across Monrovia, Liberia",
+      "url": "./case#5"
+    },
+    {
+      "type": "instagram",
+      "copy1": "Iguala, Mexico: \"We are imprisoned, abducted and killed. And still you want us to be silent?\"",
+      "url": "http://instagram.com/p/w7VuFtK7zj"
+    },
+    {
+      "type": "blog",
+      "copy1": "Premise’s Coca-Cola Index a bellwether for inflation in economies around the world",
+      "url": "http://blog.premise.com/data/science/2014/09/26/introducing-premise-coca-cola-index/"
+    },
+    {
+      "type": "casestudy",
+      "copy1": "Helping investors bring electricity to the first mile in sub-Saharan Africa",
+      "url": "./case#1"
+    },
+    {
+      "type": "blog",
+      "copy1": "The New Normal: Ebola’s impact on food prices in Monrovia, Liberia",
+      "url": "http://blog.premise.com/data/science/2014/11/10/liberia-update/"
+    },
+    {
+      "type": "blog",
+      "copy1": "Political poster wars during the presidential election in Brazil in October 2014",
+      "url": "http://blog.premise.com/data/science/2014/10/02/posters/"
+    },
+    {
+      "type": "instagram",
+      "copy1": "Barricades from the pro-democracy protests in Hong Kong, fall 2014",
+      "url": "http://instagram.com/p/t50I28K7yC"
+    },
+    {
+      "type": "instagram",
+      "copy1": "Gallons of diesel for sale in Monrovia, Liberia, to power generators",
+      "url": "http://instagram.com/p/ueF_ASq792"
+    },
+    {
+      "type": "casestudy",
+      "copy1": "Piercing the grey market veil obscuring how products trade across Vietnam",
+      "url": "./case#3"
+    },
+
+    {
+      "type": "casestudy",
+      "copy1": "Standard Chartered: Tracking the cost of feeding 200 million people in Nigeria and Ghana",
+      "url": "./case#4"
+    },
+
+    {
+      "type": "casestudy",
+      "copy1": "Bloomberg: Pioneering alternative economic indicators in key global markets",
+      "url": "./case#2"
+    },
+    {
+      "type": "instagram",
+      "copy1": "Falling oil prices have devastated access to basic goods and staples in Caracas, Venezuela",
+      "url": "http://instagram.com/p/v1_ejWq7z-"
+    }
+  ]
+}
